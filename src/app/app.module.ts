@@ -30,6 +30,8 @@ import {DividerModule} from "primeng/divider";
 import {DialogModule} from "primeng/dialog";
 import {PanelModule} from "primeng/panel";
 import {DropdownModule} from "primeng/dropdown";
+import {TabViewModule} from "primeng/tabview";
+import {AccordionModule} from "primeng/accordion";
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import {DropdownModule} from "primeng/dropdown";
     DividerModule,
     DialogModule,
     PanelModule,
-    DropdownModule
+    DropdownModule,
+    TabViewModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

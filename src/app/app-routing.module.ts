@@ -33,7 +33,7 @@ const routes: Routes = [
   {path: 'zeiteffizienz', component: ZeitEffizienzComponent},
   {path: 'supportupdates', component: SupportUpdatesComponent},
   {path: 'komfort', component: KomfortComponent},
-  {path: 'verfuegaberkeit', component: VerfuegbarkeitComponent},
+  {path: 'verfuegbarkeit', component: VerfuegbarkeitComponent},
   {path: 'faq', component: FaqComponent},
 ];
 
