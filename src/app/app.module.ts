@@ -28,6 +28,8 @@ import {RadioButtonModule} from "primeng/radiobutton";
 import {FormsModule} from "@angular/forms";
 import {DividerModule} from "primeng/divider";
 import {DialogModule} from "primeng/dialog";
+import {PanelModule} from "primeng/panel";
+import {DropdownModule} from "primeng/dropdown";
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import {DialogModule} from "primeng/dialog";
     RadioButtonModule,
     FormsModule,
     DividerModule,
-    DialogModule
+    DialogModule,
+    PanelModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
