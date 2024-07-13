@@ -22,6 +22,12 @@ import { TeilgebieteComponent } from './teilgebiete/teilgebiete.component';
 import {CardModule} from "primeng/card";
 import {Button} from "primeng/button";
 import {MenubarModule} from "primeng/menubar";
+import {FieldsetModule} from "primeng/fieldset";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {RadioButtonModule} from "primeng/radiobutton";
+import {FormsModule} from "@angular/forms";
+import {DividerModule} from "primeng/divider";
+import {DialogModule} from "primeng/dialog";
 
 @NgModule({
   declarations: [
@@ -44,11 +50,17 @@ import {MenubarModule} from "primeng/menubar";
     TeilgebieteComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     CardModule,
     Button,
-    MenubarModule
+    MenubarModule,
+    FieldsetModule,
+    RadioButtonModule,
+    FormsModule,
+    DividerModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

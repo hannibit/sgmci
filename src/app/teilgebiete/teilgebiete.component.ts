@@ -19,7 +19,7 @@ export class TeilgebieteComponent implements OnInit{
         beschreibung: 'Bereitschaft, sich auf eine Person oder eine Sache zu verlassen',
       },
       {
-        name: 'Kontrolgefühl',
+        name: 'Kontrollgefühl',
         beschreibung: 'Gefühl, die Kontrolle über eine Situation zu haben',
       },
       {

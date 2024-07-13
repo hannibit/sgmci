@@ -1,1 +1,241 @@
-<p>fragebogen works!</p>
+<div class="grid">
+  <div class="col-12">
+    <h1 style="text-align: center">Fragebogen</h1>
+  </div>
+  <div class="col-12">
+    <p style="text-align: center">
+      Bitte füllen Sie den nachfolgenden Fragebogen aus, um eine Priorisierungsempfehlung zu erhalten.
+    </p>
+    <p style="text-align: center">
+      Aufgrund der gegebenen Antworten wird eine Empfehlung für die Priorisierung der Teilgebiete gegeben.
+    </p>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Fokus des Projekts">
+      <div class="grid">
+        <div class="col-12">
+          <label>Wie sehr haben sie sich auf Systeme fokussiert, die für Transparenz für den User sorgen?</label>
+          <div *ngFor="let category of categoriesFokus">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory1"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Wie groß war ihr Fokus auf die Vorhersehbarkeit des Systems?</label>
+          <div *ngFor="let category of categoriesFokus">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory2"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Wie viel Fokus ist auf die (Cyber-) Sicherheit des Systems geflossen?</label>
+          <div *ngFor="let category of categoriesFokus">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory3"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Wie viel Fokus haben sie auf die Perspektive des Users gelegt?</label>
+          <div *ngFor="let category of categoriesFokus">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory4"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Was war das Ausmaß an Fokus das sie auf die Korrektheit der Ergebnisse des Systems gelegt
+            haben?</label>
+          <div *ngFor="let category of categoriesFokus">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory5"
+            ></p-radioButton>
+          </div>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Userinteraktion des Projekts">
+      <div class="grid">
+        <div class="col-12">
+          <label>Ist es dem User möglich nachzuvollziehen, warum das System eine Entscheidung getroffen hat?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory6"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Kann der User sich sicher sein, dass seine Daten geschützt sind?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory7"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Ist es dem User möglich das System immer zu unterbrechen?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory8"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Ist es dem User möglich mit weniger als 5 Aktionen eine wichtige Aktion des Systems anzustoßen?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory9"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Kann der User mit regelmäßigen Updates rechnen?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory10"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Sind die Aktionen des Users sofort spürbar für ihn?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory11"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Würden die meisten User ihr System bereits kennen?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory12"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Kann der User sich sicher sein, dass die Ergebnisse des Systems korrekt sind?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory13"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Kann der User zu jeder Zeit auf das System zugreifen?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory14"
+            ></p-radioButton>
+          </div>
+          <p-divider/>
+        </div>
+        <div class="col-12">
+          <label>Kann der User vorhersehen, was das Ergebnis des Systems sein wird?</label>
+          <div *ngFor="let category of categoriesInteraction">
+            <p-radioButton
+              [inputId]="category.key"
+              name="category"
+              [value]="category.key"
+              [label]="category.name"
+              [(ngModel)]="selectedCategory15"
+            ></p-radioButton>
+          </div>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+  <div class="col-12">
+    <p-button label="Berechnen" (click)="calculate()"></p-button>
+  </div>
+</div>
+
+<p-dialog
+  header="Ergebnis"
+  [modal]="true"
+  [(visible)]="visible"
+>
+  <p>
+    Aufgrund der gegebenen Antworten wird eine Empfehlung für die Priorisierung der Teilgebiete gegeben.
+  </p>
+  <div *ngFor="let teilgebiet of ausgewaehlteTeilgebiete">
+    <p-card [header]="teilgebiet.name">
+      <p style="padding-bottom: 5px">{{teilgebiet.beschreibung}}</p>
+      <p-button (click)="navigate(teilgebiet.name)">Teilgebiet {{teilgebiet.name}} anzeigen</p-button>
+    </p-card>
+  </div>
+  <div class="flex justify-content-end gap-2" style="padding-top: 5px">
+    <p-button label="Schließen" severity="secondary" (onClick)="visible = false" />
+  </div>
+</p-dialog>
