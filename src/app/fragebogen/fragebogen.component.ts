@@ -113,21 +113,316 @@ export class FragebogenComponent implements OnInit{
   }
 
   calculate() {
-    //TODO: Implement calculation and right Teilgebiete
-    this.ausgewaehlteTeilgebiete = [
-      {
-        name: 'Vertrauen',
-        beschreibung: 'Bereitschaft, sich auf eine Person oder eine Sache zu verlassen',
-      },
-      {
-        name: 'Kontrollgefühl',
-        beschreibung: 'Gefühl, die Kontrolle über eine Situation zu haben',
-      },
-      {
-        name: 'Sicherheit',
-        beschreibung: 'Schutz vor Gefahren und Risiken',
-      }
-    ]
+    //part 1
+    let fokus = 0;
+    switch (this.selectedCategory1.key) {
+      case 'keinFokus':
+        fokus += 1;
+        break;
+      case 'wenigFokus':
+        fokus += 2;
+        break;
+      case 'wederNoch':
+        fokus += 3;
+        break;
+      case 'mittlererFokus':
+        fokus += 4;
+        break;
+      case 'hoherFokus':
+        fokus += 5;
+        break;
+    }
+    switch (this.selectedCategory2.key) {
+      case 'keinFokus':
+        fokus += 1;
+        break;
+      case 'wenigFokus':
+        fokus += 2;
+        break;
+      case 'wederNoch':
+        fokus += 3;
+        break;
+      case 'mittlererFokus':
+        fokus += 4;
+        break;
+      case 'hoherFokus':
+        fokus += 5;
+        break;
+    }
+    switch (this.selectedCategory3.key) {
+      case 'keinFokus':
+        fokus += 1;
+        break;
+      case 'wenigFokus':
+        fokus += 2;
+        break;
+      case 'wederNoch':
+        fokus += 3;
+        break;
+      case 'mittlererFokus':
+        fokus += 4;
+        break;
+      case 'hoherFokus':
+        fokus += 5;
+        break;
+    }
+    switch (this.selectedCategory4.key) {
+      case 'keinFokus':
+        fokus += 1;
+        break;
+      case 'wenigFokus':
+        fokus += 2;
+        break;
+      case 'wederNoch':
+        fokus += 3;
+        break;
+      case 'mittlererFokus':
+        fokus += 4;
+        break;
+      case 'hoherFokus':
+        fokus += 5;
+        break;
+    }
+    switch (this.selectedCategory5.key) {
+      case 'keinFokus':
+        fokus += 1;
+        break;
+      case 'wenigFokus':
+        fokus += 2;
+        break;
+      case 'wederNoch':
+        fokus += 3;
+        break;
+      case 'mittlererFokus':
+        fokus += 4;
+        break;
+      case 'hoherFokus':
+        fokus += 5;
+        break;
+    }
+
+    //part 2
+    let interaction = 0;
+    switch (this.selectedCategory6.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+    switch (this.selectedCategory7.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+    switch (this.selectedCategory8.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+    switch (this.selectedCategory9.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+    switch (this.selectedCategory10.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+    switch (this.selectedCategory11.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+    switch (this.selectedCategory12.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+    switch (this.selectedCategory13.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+    switch (this.selectedCategory14.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+    switch (this.selectedCategory15.key) {
+      case 'nein':
+        interaction += 1;
+        break;
+      case 'selten':
+        interaction += 2;
+        break;
+      case 'teilweise':
+        interaction += 3;
+        break;
+      case 'groestenteils':
+        interaction += 4;
+        break;
+      case 'ja':
+        interaction += 5;
+        break;
+    }
+
+    let result = fokus + interaction;
+    if (result <= 20) {
+      this.ausgewaehlteTeilgebiete = [
+        {
+          name: 'Erfahrung und Bekanntheit',
+          beschreibung: 'Wissen und Kenntnisse über eine Sache oder Person',
+        },
+        {
+          name: 'Zeit/Effizienz',
+          beschreibung: 'Zeitersparnis und schnelle Erledigung von Aufgaben',
+        },
+        {
+          name: 'Support/Updates',
+          beschreibung: 'Unterstützung und Aktualisierungen',
+        },
+      ]
+    }
+    if (result >20 && result <= 40) {
+      this.ausgewaehlteTeilgebiete = [
+        {
+          name: 'Korrektheit',
+          beschreibung: 'Richtigkeit, Genauigkeit und Fehlerfreiheit',
+        },
+        {
+          name: 'Transparenz',
+          beschreibung: 'Offenlegung von Informationen und Prozessen',
+        },
+        {
+          name: 'Vorhersehbarkeit',
+          beschreibung: 'Möglichkeit, zukünftige Ereignisse vorherzusagen',
+        },
+      ]
+    }
+    if (result > 40 && result <= 65) {
+      this.ausgewaehlteTeilgebiete = [
+        {
+          name: 'Vertrauen',
+          beschreibung: 'Bereitschaft, sich auf eine Person oder eine Sache zu verlassen',
+        },
+        {
+          name: 'Kontrollgefühl',
+          beschreibung: 'Gefühl, die Kontrolle über eine Situation zu haben',
+        },
+        {
+          name: 'Sicherheit',
+          beschreibung: 'Schutz vor Gefahren und Risiken',
+        }
+      ]
+    }
 
     this.showDialog()
   }
@@ -173,6 +468,5 @@ export class FragebogenComponent implements OnInit{
         return
     }
   }
-
 
 }
