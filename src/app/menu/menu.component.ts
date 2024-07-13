@@ -26,7 +26,64 @@ export class MenuComponent implements OnInit{
       {
         label: 'Teilgebiete',
         icon: 'pi pi-th-large',
-        route: '/teilgebiete'
+        route: '/teilgebiete',
+        items: [
+          {
+            label: 'Vertrauen',
+            icon: 'pi pi-th-large',
+            route: '/vertrauen'
+          },
+          {
+            label: 'Kontrollgefühl',
+            icon: 'pi pi-th-large',
+            route: '/kontrollgefuehl'
+          },
+          {
+            label: 'Sicherheit',
+            icon: 'pi pi-th-large',
+            route: '/sicherheit'
+          },
+          {
+            label: 'Korrektheit',
+            icon: 'pi pi-th-large',
+            route: '/korrektheit'
+          },
+          {
+            label: 'Transparenz',
+            icon: 'pi pi-th-large',
+            route: '/transparenz'
+          },
+          {
+            label: 'Vorhersehbarkeit',
+            icon: 'pi pi-th-large',
+            route: '/vorhersehbarkeit'
+          },
+          {
+            label: 'Erfahrung und Bekanntheit',
+            icon: 'pi pi-th-large',
+            route: '/erfahrungundbekanntheit'
+          },
+          {
+            label: 'Zeit/Effizienz',
+            icon: 'pi pi-th-large',
+            route: '/zeiteffizienz'
+          },
+          {
+            label: 'Support/Updates',
+            icon: 'pi pi-th-large',
+            route: '/supportupdates'
+          },
+          {
+            label: 'Komfort',
+            icon: 'pi pi-th-large',
+            route: '/komfort'
+          },
+          {
+            label: 'Verfügbarkeit',
+            icon: 'pi pi-th-large',
+            route: '/verfuegbarkeit'
+          },
+        ]
       },
       {
         label: 'FAQ',
