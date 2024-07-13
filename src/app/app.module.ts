@@ -18,6 +18,10 @@ import { VerfuegbarkeitComponent } from './verfuegbarkeit/verfuegbarkeit.compone
 import { VertrauenComponent } from './vertrauen/vertrauen.component';
 import { VorhersehbarkeitComponent } from './vorhersehbarkeit/vorhersehbarkeit.component';
 import { ZeitEffizienzComponent } from './zeit-effizienz/zeit-effizienz.component';
+import { TeilgebieteComponent } from './teilgebiete/teilgebiete.component';
+import {CardModule} from "primeng/card";
+import {Button} from "primeng/button";
+import {MenubarModule} from "primeng/menubar";
 
 @NgModule({
   declarations: [
@@ -36,11 +40,15 @@ import { ZeitEffizienzComponent } from './zeit-effizienz/zeit-effizienz.componen
     VerfuegbarkeitComponent,
     VertrauenComponent,
     VorhersehbarkeitComponent,
-    ZeitEffizienzComponent
+    ZeitEffizienzComponent,
+    TeilgebieteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CardModule,
+    Button,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+<div class="grid">
+  <div class="col-12">
+    <h1 style="text-align: center">Teilgebiete</h1>
+  </div>
+  <div class="col-12">
+    <p style="text-align: center">Willkommen im Dashboard. Hier können Sie auf die Funktionalitäten dieser Anwendung zugreifen.</p>
+  </div>
+  <div class="col-12">
+    <div *ngFor="let teilgebiet of teilgebiete">
+      <p-card [header]="teilgebiet.name">
+        <p style="padding-bottom: 5px">{{teilgebiet.beschreibung}}</p>
+        <p-button (click)="navigate(teilgebiet.name)">Teilgebiet {{teilgebiet.name}} anzeigen</p-button>
+      </p-card>
+    </div>
+  </div>
+</div>
