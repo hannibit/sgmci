@@ -3,26 +3,41 @@
     <h1 style="text-align: center">Vertrauen in automatisierte Systeme</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Willkommen im Dashboard. Hier können Sie auf die Funktionalitäten dieser Anwendung zugreifen.</p>
+    <p style="text-align: center">Willkommen im Dashboard. Hier können Sie auf die Funktionalitäten dieser Anwendung
+      zugreifen.</p>
     <p style="text-align: center">...</p>
     <p style="text-align: center">Wählen Sie eine der folgenden Optionen aus:</p>
   </div>
   <div class="col-6">
     <p-card header="Fragebogen">
       <p style="padding-bottom: 5px; text-align: center">Sie sind sich nicht sicher, welcher...</p>
-      <p-button (click)="fragebogen()">Test starten</p-button>
+      <ng-template pTemplate="footer">
+        <div>
+          <p-button (click)="fragebogen()">Test starten</p-button>
+        </div>
+      </ng-template>
     </p-card>
   </div>
   <div class="col-6">
     <p-card header="Teilgebiete">
-      <p style="padding-bottom: 5px; text-align: center">Hier finden Sie eine Übersicht über die Teilgebiete, die... </p>
-      <p-button (click)="teilgebiete()">Teilgebiete anzeigen</p-button>
+      <p style="padding-bottom: 5px; text-align: center">Hier finden Sie eine Übersicht über die Teilgebiete,
+        die... </p>
+      <ng-template pTemplate="footer">
+        <div>
+          <p-button (click)="teilgebiete()">Teilgebiete anzeigen</p-button>
+        </div>
+      </ng-template>
     </p-card>
   </div>
   <div class="col-12">
     <p-card header="FAQ">
-      <p style="padding-bottom: 5px; text-align: center">Sollten Sie offene Fragen haben, werden diese hier beantwortet...</p>
-      <p-button (click)="faq()">FAQ öffnen</p-button>
+      <p style="padding-bottom: 5px; text-align: center">Sollten Sie offene Fragen haben, werden diese hier
+        beantwortet...</p>
+      <ng-template pTemplate="footer">
+        <div>
+          <p-button (click)="faq()">FAQ öffnen</p-button>
+        </div>
+      </ng-template>
     </p-card>
   </div>
 </div>
