@@ -32,6 +32,7 @@ import {PanelModule} from "primeng/panel";
 import {DropdownModule} from "primeng/dropdown";
 import {TabViewModule} from "primeng/tabview";
 import {AccordionModule} from "primeng/accordion";
+import {StepperModule} from "primeng/stepper";
 
 @NgModule({
   declarations: [
@@ -53,23 +54,24 @@ import {AccordionModule} from "primeng/accordion";
     ZeitEffizienzComponent,
     TeilgebieteComponent
   ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    AppRoutingModule,
-    CardModule,
-    Button,
-    MenubarModule,
-    FieldsetModule,
-    RadioButtonModule,
-    FormsModule,
-    DividerModule,
-    DialogModule,
-    PanelModule,
-    DropdownModule,
-    TabViewModule,
-    AccordionModule
-  ],
+    imports: [
+        BrowserAnimationsModule,
+        BrowserModule,
+        AppRoutingModule,
+        CardModule,
+        Button,
+        MenubarModule,
+        FieldsetModule,
+        RadioButtonModule,
+        FormsModule,
+        DividerModule,
+        DialogModule,
+        PanelModule,
+        DropdownModule,
+        TabViewModule,
+        AccordionModule,
+        StepperModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

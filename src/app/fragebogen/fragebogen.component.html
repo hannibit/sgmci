@@ -217,7 +217,11 @@
     </p-fieldset>
   </div>
   <div class="col-12">
-    <p-button label="Berechnen" (click)="calculate()"></p-button>
+    <p-button
+      type="submit"
+      label="Berechnen"
+      (click)="calculate()"
+    ></p-button>
   </div>
 </div>
 
@@ -231,11 +235,11 @@
   </p>
   <div *ngFor="let teilgebiet of ausgewaehlteTeilgebiete">
     <p-card [header]="teilgebiet.name">
-      <p style="padding-bottom: 5px">{{teilgebiet.beschreibung}}</p>
-      <p-button (click)="navigate(teilgebiet.name)">Teilgebiet {{teilgebiet.name}} anzeigen</p-button>
+      <p style="padding-bottom: 5px">{{ teilgebiet.beschreibung }}</p>
+      <p-button (click)="navigate(teilgebiet.name)">Teilgebiet {{ teilgebiet.name }} anzeigen</p-button>
     </p-card>
   </div>
   <div class="flex justify-content-end gap-2" style="padding-top: 5px">
-    <p-button label="Schließen" severity="secondary" (onClick)="visible = false" />
+    <p-button label="Schließen" severity="secondary" (onClick)="visible = false"/>
   </div>
 </p-dialog>
