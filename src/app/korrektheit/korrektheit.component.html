@@ -120,7 +120,7 @@
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h4 style="text-align: center">Formal Verifikation</h4>
+    <h4 style="text-align: center">Formale Verifikation</h4>
     <p-stepper>
       <p-stepperPanel>
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
@@ -161,22 +161,50 @@
   </div>
   <div class="col-6">
     <h4 style="text-align: center">Software Testing</h4>
-    <p>
-      Software Testing ist ein wesentlicher Bestandteil der Softwareentwicklung und dient dazu, Fehler in der
-      Software zu finden und zu beheben. Es gibt verschiedene Arten von Softwaretests, wie z. B.:
-    </p>
-    <p class="indented-paragraph">
-      <b>Unit-Tests:</b> Testen einzelne Komponenten der Software.
-    </p>
-    <p class="indented-paragraph">
-      <b>Integrationstests:</b> Testen das Zusammenspiel mehrerer Komponenten.
-    </p>
-    <p class="indented-paragraph">
-      <b>Systemtests:</b> Testen das gesamte System.
-    </p>
-    <p class="indented-paragraph">
-      <b>Akzeptanztests:</b> Testen, ob das System die Anforderungen des Benutzers erfüllt.
-    </p>
+    <p-stepper>
+      <p-stepperPanel>
+        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Software Testing ist ein wesentlicher Bestandteil der Softwareentwicklung und dient dazu, Fehler in der
+                Software zu finden und zu beheben.
+              </p>
+            </div>
+          </div>
+          <div class="flex pt-4 justify-content-end">
+            <p-button
+              label="Beispiel"
+              icon="pi pi-arrow-right"
+              iconPos="right"
+              (onClick)="nextCallback.emit()"/>
+          </div>
+        </ng-template>
+      </p-stepperPanel>
+      <p-stepperPanel header="Beispiel">
+        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p class="indented-paragraph">
+                <b>Unit-Tests:</b> Testen einzelne Komponenten der Software.
+              </p>
+              <p class="indented-paragraph">
+                <b>Integrationstests:</b> Testen das Zusammenspiel mehrerer Komponenten.
+              </p>
+              <p class="indented-paragraph">
+                <b>Systemtests:</b> Testen das gesamte System.
+              </p>
+              <p class="indented-paragraph">
+                <b>Akzeptanztests:</b> Testen, ob das System die Anforderungen des Benutzers erfüllt.
+              </p>
+            </div>
+          </div>
+          <div class="flex pt-4 justify-content-start">
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
+          </div>
+        </ng-template>
+      </p-stepperPanel>
+    </p-stepper>
   </div>
   <div class="col-12">
     <p-divider/>

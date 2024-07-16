@@ -3,169 +3,175 @@
     <h1 style="text-align: center">Sicherheit</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Einführung</p>
+    <h4>
+      Sicherheit in Human Automation Interaction:
+    </h4>
+    <p>
+      Sicherheit in der Mensch-Automatisierung-Interaktion umfasst sowohl physische als auch psychische Aspekte. Das System muss so konzipiert und implementiert sein, dass es weder dem Benutzer noch seiner Umgebung Schaden zufügt. Es muss außerdem das Gefühl von Sicherheit und Geborgenheit beim Benutzer fördern, um Angst und Stress zu minimieren.
+    </p>
+    <p class="indented-paragraph">
+      <b>Physische Sicherheit:</b> Das System darf keine Verletzungen oder Schäden an Personen oder Objekten verursachen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Psychische Sicherheit:</b> Das System darf keine Angst, Stress oder Unbehagen beim Benutzer auslösen.
+    </p>
+    <h4>
+      Für wen ist Sicherheit relevant?
+    </h4>
+    <p>
+      Sicherheit ist für alle Benutzer von Automationssystemen relevant, insbesondere aber für:
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer, die in physischer Nähe zum System arbeiten:</b> Wie beispielsweise in der Fertigung oder im
+      Gesundheitswesen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer, die sich auf das System verlassen:</b> Wie beispielsweise Passagiere in autonomen Fahrzeugen oder
+      Patienten, die von medizinischen Robotern behandelt werden.
+    </p>
     <p-divider/>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Do's</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Risikoanalyse">
         <p>
-          Lorem ipsum dolor sit amet...
+          Führen Sie eine gründliche Risikoanalyse durch, um potenzielle Gefahrenquellen zu identifizieren und zu bewerten.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Sicherheitsvorkehrungen">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Implementieren Sie geeignete Sicherheitsvorkehrungen, um die identifizierten Risiken zu minimieren, z. B. Not-Aus-Schalter, Sicherheitsbarrieren oder redundante Systeme.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Klare Kommunikation">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Kommunizieren Sie dem Benutzer die Sicherheitsvorkehrungen und das Verhalten des Systems in Gefahrensituationen klar und deutlich.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Fehlertolerantes Design">
+        <p>
+          Entwickeln Sie ein fehlertolerantes System, das auch bei Ausfall einzelner Komponenten sicher bleibt.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Kontinuierliche Überwachung">
+        <p>
+          Überwachen Sie das System kontinuierlich auf Sicherheitsrisiken und reagieren Sie schnell und effizient auf potenzielle Probleme.
         </p>
       </p-tabPanel>
     </p-tabView>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Don'ts</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Ignorieren von Risiken">
         <p>
-          Lorem ipsum dolor sit amet...
+          Ignorieren Sie potenzielle Sicherheitsrisiken nicht. Gehen Sie davon aus, dass Fehler auftreten können und
+          bereiten Sie das System darauf vor.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Unzureichende Sicherheitsvorkehrungen">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Verlassen Sie sich nicht auf unzureichende Sicherheitsvorkehrungen.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Mangelnde Kommunikation">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Lassen Sie den Benutzer nicht im Unklaren über die Sicherheitsaspekte des Systems.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Komplexes Design">
+        <p>
+          Gestalten Sie das System nicht unnötig komplex.
         </p>
       </p-tabPanel>
     </p-tabView>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Beispiel" [toggleable]="true" collapsed="true">
+      <p>
+        <b>Do:</b> Ein kollaborativer Roboter in einer Fabrik verfügt über Sensoren, die Kollisionen mit Menschen erkennen und den Roboterarm stoppen, bevor es zu einer Verletzung kommt.
+      </p>
+      <p>
+        <b>Dont:</b> Ein autonomes Fahrzeug fährt mit hoher Geschwindigkeit, obwohl die Sichtverhältnisse schlecht sind und es nicht alle Objekte in seiner Umgebung zuverlässig erkennen kann.
+      </p>
+    </p-fieldset>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Safety by Design (Robla-Gomez et al., 2017)</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Integrieren Sie Sicherheitsaspekte von Anfang an in den Entwicklungsprozess, anstatt diese erst nachträglich zu berücksichtigen.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div
+              class="justify-content-center align-items-center font-medium">
+              Bei der Entwicklung eines autonomen Fahrzeugs werden Sicherheitsaspekte wie Notbremssysteme und Fußgängererkennung bereits in der frühen Designphase berücksichtigt.
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
     </p-stepper>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
-  </div>
-  <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
+    <h4 style="text-align: center">Risikobewertungsmethoden</h4>
+    <p>
+      Nutzen Sie etablierte Risikobewertungsmethoden wie beispielsweise:
+    </p>
+    <p class="indented-paragraph">
+      <b>HAZOP (Hazard and Operability Study):</b> Identifiziert potenzielle Gefahren und Betriebsprobleme.
+    </p>
+    <p class="indented-paragraph">
+      <b>FMEA (Failure Mode and Effects Analysis):</b> Analysiert die Auswirkungen von Fehlern auf das System.
+    </p>
+    <p class="indented-paragraph">
+      <b>FTA (Fault Tree Analysis):</b> Untersucht die Ursachen von Fehlern und deren Zusammenhänge.
+    </p>
+    <p class="indented-paragraph">
+      <b>STPA (Systems-Theoretic Process Analysis):</b> Analysiert die Steuerung des Systems und die Ursachen von Fehlern in der Systemsteuerung.
+    </p>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Potentielle Probleme</h3>
     <p-accordion>
-      <p-accordionTab header="Header I">
+      <p-accordionTab header="Komplexität der Risikobewertung">
         <p>
-          Lorem ipsum dolor sit amet...
+          Die Risikobewertung kann in komplexen Systemen schwierig und zeitaufwendig sein.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header II">
+      <p-accordionTab header="Unvorhersehbare Ereignisse">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Es ist unmöglich, alle potenziellen Gefahrenquellen im Voraus zu identifizieren.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="Menschliches Versagen">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Auch bei sicheren Systemen können menschliche Fehler zu Unfällen führen.
         </p>
       </p-accordionTab>
     </p-accordion>
@@ -174,7 +180,31 @@
     <p-divider/>
     <p-fieldset legend="Ressourcenempfehlungen/Literatur" [toggleable]="true" collapsed="true">
       <p>
-        Lorem ipsum dolor sit amet...
+        <b>Normen:</b>
+      </p>
+      <p>
+        ISO 10218-1:2011 Roboter und robotische Einrichtungen - Sicherheitsanforderungen - Teil 1: Industrieroboter.
+      </p>
+      <p>
+        ISO 13482:2014 Roboter und robotische Einrichtungen - Sicherheitsanforderungen für persönliche Assistenzroboter.
+      </p>
+      <p>
+        <b>Artikel:</b>
+      </p>
+      <p>
+        Robla-Gomez, S., Becerra, V. M., Llata, J. R., Gonzalez-Sarabia, E., Torre-Ferrero, C., & Perez-Oria, J. (2017). Working together: a review on safe human-robot collaboration in industrial environments. IEEE Access, 5, 26754-26773.
+      </p>
+      <p>
+        Lasota, P. A., Fong, T., & Shah, J. A. (2017). A survey of methods for safe human-robot interaction. Foundations and Trends® in Robotics, 5(4), 261-349.
+      </p>
+      <p>
+        <b>Bücher:</b>
+      </p>
+      <p>
+        Ericson, C. A. (2015). Hazard analysis techniques for system safety. John Wiley & Sons.
+      </p>
+      <p>
+        Leveson, N. G. (2011). Engineering a safer world: Systems thinking applied to safety. MIT press.
       </p>
     </p-fieldset>
   </div>
