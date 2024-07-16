@@ -3,147 +3,212 @@
     <h1 style="text-align: center">Transparenz</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Einführung</p>
+    <h4>
+      Transparenz in Human Automation Interaction bedeutet:
+    </h4>
+    <p>
+      Die Fähigkeit eines Systems, dem Benutzer verständlich zu machen, wie es Entscheidungen trifft und welche
+      Informationen es dafür verwendet. Das beinhaltet Einblicke in:
+    </p>
+    <p class="indented-paragraph">
+      <b>Intentionen:</b> Warum führt das System eine bestimmte Aktion aus?
+    </p>
+    <p class="indented-paragraph">
+      <b>Leistung:</b> Wie gut funktioniert das System und wie zuverlässig sind seine Ergebnisse?
+    </p>
+    <p class="indented-paragraph">
+      <b>Zukünftige Pläne:</b> Was plant das System als nächstes zu tun?
+    </p>
+    <p class="indented-paragraph">
+      <b>Denkprozess:</b> Wie kommt das System zu seinen Entscheidungen?
+    </p>
+    <h4>
+      Für wen ist Transparenz relevant?
+    </h4>
+    <p>
+      Transparenz ist für alle Benutzer von Automationssystemen wichtig, insbesondere aber für:
+    </p>
+    <p class="indented-paragraph">
+      <b>Unerfahrene Benutzer:</b> Die sich mit der Funktionsweise des Systems nicht auskennen und leicht überfordert
+      sein können.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer in sicherheitskritischen Umgebungen:</b> Die sich auf die korrekte Funktion des Systems verlassen
+      müssen und im Notfall schnell und richtig reagieren müssen.
+    </p>
+    <p>
+      Diese Guideline soll Entwicklern helfen, transparente Automationssysteme zu gestalten, die das Vertrauen der Benutzer stärken und eine effiziente und sichere Zusammenarbeit ermöglichen.
+    </p>
     <p-divider/>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Do's</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Verständliche Sprache">
         <p>
-          Lorem ipsum dolor sit amet...
+          Verwenden Sie eine einfache, klare und für den Benutzer verständliche Sprache. Vermeiden Sie Fachbegriffe und
+          komplexe Formulierungen.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Visuelle Hlfsmittel">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Verwenden Sie Diagramme, Grafiken und Animationen, um komplexe Informationen zu veranschaulichen.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Kontextbezogene Informationen">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Liefern Sie nur Informationen, die für den Benutzer in der aktuellen Situation relevant sind.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Echtzeit-Feedback">
+        <p>
+          Geben Sie dem Benutzer kontinuierlich Feedback über den Status des Systems und seine Entscheidungen.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Möglichkeit zur Interaktion">
+        <p>
+          Ermöglichen Sie dem Benutzer, das System zu hinterfragen, Feedback zu geben und Entscheidungen zu
+          beeinflussen.
         </p>
       </p-tabPanel>
     </p-tabView>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Don'ts</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Informationsüberflutung">
         <p>
-          Lorem ipsum dolor sit amet...
+          Überfordern Sie den Benutzer nicht mit zu vielen Informationen.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Blackbox-System">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Verbergen Sie die Funktionsweise des Systems nicht vor dem Benutzer.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Mangelndes Feedback">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Lassen Sie den Benutzer nicht im Unklaren über den Status des Systems und seine Entscheidungen.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Einseitige Kommunikation">
+        <p>
+          Gestalten Sie die Kommunikation zwischen Benutzer und System nicht einseitig.
         </p>
       </p-tabPanel>
     </p-tabView>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Beispiel" [toggleable]="true" collapsed="true">
+      <p>
+        <b>Do:</b> Ein autonomes Fahrzeug zeigt dem Benutzer auf einem Display an, welche Objekte es in seiner Umgebung wahrnimmt und wie es diese klassifiziert
+      </p>
+      <p>
+        <b>Dont:</b> Ein autonomes Fahrzeug führt eine Notbremsung durch, ohne dem Benutzer den Grund dafür mitzuteilen.
+      </p>
+    </p-fieldset>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Das 5-Ebenen-Modell der Transparenz (Mercado et al., 2016)</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Definieren Sie, welche Informationen auf welcher Ebene der Transparenz für den Benutzer relevant sind:
+              </p>
+              <p class="indented-paragraph">
+                <b>Ebene 0:</b> Keine Transparenz: Der Benutzer erhält keine Informationen über das System.
+              </p>
+              <p class="indented-paragraph">
+                <b>Ebene 1:</b> System Status: Der Benutzer erhält grundlegende Informationen über den Status des Systems.
+              </p>
+              <p class="indented-paragraph">
+                <b>Ebene 2:</b> Absichten und Ziele: Der Benutzer erfährt, welche Ziele das System verfolgt.
+              </p>
+              <p class="indented-paragraph">
+                <b>Ebene 3:</b> Entscheidungen und Aktionen: Der Benutzer sieht, welche Entscheidungen das System trifft und
+                welche Aktionen es ausführt.
+              </p>
+              <p class="indented-paragraph">
+                <b>Ebene 4:</b> Begründung und Erklärungen: Der Benutzer erhält detaillierte Erklärungen für die Entscheidungen
+                und Aktionen des Systems.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div
+              class="justify-content-center align-items-center font-medium">
+              Ein Roboterarm in einer Fabrik zeigt dem Benutzer auf Ebene 3 an, welche Bewegungen er als nächstes ausführen wird.
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
     </p-stepper>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Adaptive Transparenz (Helldin, 2014)</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Passen Sie die Transparenzstufe dynamisch an die Bedürfnisse des Benutzers und die Anforderungen der Situation an.
+              </p>
+              <p>
+                <b>Aufgaben:</b>
+              </p>
+              <p class="indented-paragraph">
+                Definieren Sie verschiedene Transparenzstufen für Ihr System.
+              </p>
+              <p class="indented-paragraph">
+                Entwickeln Sie einen Algorithmus, der die aktuelle Situation (z. B. Komplexität der Aufgabe, Erfahrung des Benutzers, Zeitdruck) analysiert und die passende Transparenzstufe auswählt.
+              </p>
+              <p class="indented-paragraph">
+                Testen Sie den Algorithmus mit Benutzern, um sicherzustellen, dass er die Transparenzstufe angemessen anpasst.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Ein Navigationssystem im Auto blendet detaillierte Karteninformationen nur dann ein, wenn der Benutzer sich in einer komplexen Verkehrssituation befindet.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
-  </div>
-  <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
@@ -151,30 +216,67 @@
   </div>
   <div class="col-12">
     <p-divider/>
-    <h3 style="text-align: center">Problemstellungen</h3>
+    <h3 style="text-align: center">Potentielle Probleme</h3>
     <p-accordion>
-      <p-accordionTab header="Header I">
+      <p-accordionTab header="Überforderung des Nutzers">
         <p>
-          Lorem ipsum dolor sit amet...
+          Zu viel Information kann den Benutzer überfordern und das Vertrauen in das System verringern.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header II">
+      <p-accordionTab header="Verlust der Effizienz">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Die Bereitstellung detaillierter Informationen kann zeitaufwendig sein und die Effizienz des Systems beeinträchtigen.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="Komplexität der Implementierung">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Die Implementierung von Transparenz in komplexe Systeme kann aufwendig sein.
+        </p>
+      </p-accordionTab>
+      <p-accordionTab header="Vertrauensverlust durch detaillierte Einblicke">
+        <p>
+          Falls die Entscheidungsfindung im System für den User nicht intuitiv erscheint, kann dies zu Vertrauensverlust führen, obwohl alle Informationen transparent sind.
+        </p>
+      </p-accordionTab>
+      <p-accordionTab header="Falsche Interpretation der Daten">
+        <p>
+          Benutzer könnten die bereitgestellten Informationen falsch interpretieren, was zu fehlerhaftem Handeln führen kann.
         </p>
       </p-accordionTab>
     </p-accordion>
   </div>
   <div class="col-12">
     <p-divider/>
-    <p-fieldset legend="Ressourcenempfehlungen" [toggleable]="true" collapsed="true">
+    <p-fieldset legend="Ressourcenempfehlungen/Literatur" [toggleable]="true" collapsed="true">
       <p>
-        Lorem ipsum dolor sit amet...
+        <b>Bücher:</b>
+      </p>
+      <p>
+        Parasuraman, R., Sheridan, T. B., & Wickens, C. D. (2000). A model for types and levels of human interaction with automation. IEEE Transactions on Systems, Man, and Cybernetics-Part A: Systems and Humans, 30(3), 286-297.
+      </p>
+      <p>
+        Lee, J. D., & See, K. A. (2004). Trust in automation: Designing for appropriate reliance. Human Factors, 46(1), 50-80.
+      </p>
+      <p>
+        <b>Artikel:</b>
+      </p>
+      <p>
+        Mercado, J. E., Rupp, M. A., Chen, J. Y. C., Barnes, M. J., Barber, D., & Procci, K. (2016). Intelligent agent transparency in human–agent teaming for Multi-UxV management. Human Factors, 58(3), 401-415.
+      </p>
+      <p>
+        Helldin, T. (2014). Transparency for future semi-automated systems: Effects of transparency on operator performance, workload, and trust (Doctoral dissertation, Örebro universitet).
+      </p>
+      <p>
+        <b>Software:</b>
+      </p>
+      <p>
+        Affdex SDK: Analyse von Gesichtsausdrücken & Emotionen
+      </p>
+      <p>
+        Empatica E4: Messung physiologischer Signale
+      </p>
+      <p>
+        Wizard-of-Oz Methode: Simulation von Systemverhalten
       </p>
     </p-fieldset>
   </div>

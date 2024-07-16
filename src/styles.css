@@ -3,3 +3,7 @@
   padding: 1.25rem 0;
   display: flex
 }
+
+.indented-paragraph {
+  text-indent: 2em; /* Hier kannst du die Einrückungstiefe anpassen */
+}
