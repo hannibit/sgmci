@@ -3,147 +3,207 @@
     <h1 style="text-align: center">Erfahrung und Bekanntheit</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Einführung</p>
+    <h4>
+      Erfahrung und Bekanntheit eines Systems in Human Automation Interaction:
+    </h4>
+    <p>
+      Beschreibt das Ausmaß an Erfahrung und Vertrautheit, das ein Benutzer mit einem Automationssystem hat. Je
+      erfahrener und bekannter ein System ist, desto sicherer und effizienter kann der Benutzer damit umgehen. Umgekehrt
+      kann ein Mangel an Erfahrung zu Unsicherheit, Fehlern und Vertrauensverlust führen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Erfahrung:</b> Die Menge an praktischer Erfahrung, die der Benutzer mit dem System gesammelt hat.
+    </p>
+    <p class="indented-paragraph">
+      <b>Bekanntheit:</b> Das Wissen des Benutzers über die Funktionsweise, die Möglichkeiten und die Grenzen des
+      Systems.
+    </p>
+    <h4>
+      Für wen ist Erfahrung und Bekanntheit relevant?
+    </h4>
+    <p>
+      Erfahrung und Bekanntheit sind für alle Benutzer von Automationssystemen relevant, insbesondere aber für:
+    </p>
+    <p class="indented-paragraph">
+      <b>Neue Benutzer:</b> Die zum ersten Mal mit dem System interagieren und dessen Funktionsweise erst erlernen
+      müssen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Gelegentliche Benutzer:</b> Die das System nur selten benutzen und deren Wissen über das System möglicherweise
+      nicht auf dem neuesten Stand ist.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer, die komplexe Aufgaben mit dem System ausführen:</b> Die ein tiefes Verständnis der Systemfunktionen
+      benötigen, um Fehler zu vermeiden.
+    </p>
     <p-divider/>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Do's</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Intuitive Benutzeroberfläche">
         <p>
-          Lorem ipsum dolor sit amet...
+          Gestalten Sie die Benutzeroberfläche des Systems intuitiv und selbsterklärend, sodass Benutzer die Funktionen
+          auch ohne vorherige Schulung leicht verstehen können.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Schrittweise Einführung">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Führen Sie neue Benutzer schrittweise in die Funktionen des Systems ein. Beginnen Sie mit den grundlegenden
+          Funktionen und erweitern Sie die Möglichkeiten des Systems nach und nach.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Hilfefunktionen und Tutorials">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Stellen Sie umfassende Hilfefunktionen und Tutorials bereit, die dem Benutzer bei Bedarf detaillierte
+          Informationen und Anleitungen liefern.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Training und Schulungen">
+        <p>
+          Bieten Sie Schulungen und Trainings an, um Benutzern die Möglichkeit zu geben, ihre Kenntnisse über das System
+          zu vertiefen und praktische Erfahrungen zu sammeln.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Feedback und Unterstützung">
+        <p>
+          Ermöglichen Sie Benutzern, Feedback zu geben und Unterstützung anzufordern, wenn sie auf Probleme stoßen oder
+          Fragen haben.
         </p>
       </p-tabPanel>
     </p-tabView>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Don'ts</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Komplexe Benutzeroberfläche">
         <p>
-          Lorem ipsum dolor sit amet...
+          Vermeiden Sie eine komplexe und überladene Benutzeroberfläche, die Benutzer überfordern könnte.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Mangelnde Hilfefunktionen">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Verzichten Sie nicht auf Hilfefunktionen und Tutorials. Benutzer sollten jederzeit die Möglichkeit haben, sich
+          über die Funktionen des Systems zu informieren.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Unzureichende Einführung">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Überlassen Sie neue Benutzer nicht sich selbst. Stellen Sie sicher, dass sie eine angemessene Einführung in
+          das System erhalten.
         </p>
       </p-tabPanel>
     </p-tabView>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Beispiel" [toggleable]="true" collapsed="true">
+      <p>
+        <b>Do:</b> Eine Software für die Bildbearbeitung bietet interaktive Tutorials an, die den Benutzer Schritt für
+        Schritt durch die verschiedenen Funktionen führen.
+      </p>
+      <p>
+        <b>Dont:</b> Ein komplexes Steuerungssystem für eine Produktionsanlage wird ohne ausreichende Schulung und
+        Dokumentation in Betrieb genommen.
+      </p>
+    </p-fieldset>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">User Onboarding</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Gestalten Sie den Einstieg in das System (Onboarding) so einfach und angenehm wie möglich, um neuen
+                Benutzern den Einstieg zu erleichtern und ein positives erstes Erlebnis zu schaffen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Willkommensnachricht:</b> Begrüßen Sie neue Benutzer freundlich und erklären Sie kurz die wichtigsten
+                Funktionen des Systems.
+              </p>
+              <p class="indented-paragraph">
+                <b>Interaktive Tutorials:</b> Führen Sie Benutzer Schritt für Schritt durch die grundlegenden Funktionen
+                des Systems.
+              </p>
+              <p class="indented-paragraph">
+                <b>Hilfreiche Tipps:</b> Geben Sie Benutzern hilfreiche Tipps und Tricks, die ihnen den Umgang mit dem
+                System erleichtern.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div
+              class="justify-content-center align-items-center font-medium">
+              Eine neue App begrüßt den Benutzer mit seinem Namen und bietet ihm ein kurzes Tutorial an, das die
+              wichtigsten Funktionen der App erklärt.
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
     </p-stepper>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Gamification</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Verwenden Sie spielerische Elemente (Gamification), um den Lernprozess interessanter und motivierender
+                zu gestalten.
+              </p>
+              <p class="indented-paragraph">
+                <b>Punkte und Belohnungen:</b> Belohnen Sie Benutzer für das Erreichen von Lernzielen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Wettbewerbe:</b> Ermöglichen Sie Benutzern, sich mit anderen zu messen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Fortschrittsanzeigen:</b> Zeigen Sie Benutzern ihren Lernfortschritt an.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Eine Sprachlern-App belohnt Benutzer mit Punkten und Abzeichen für das Absolvieren von Lektionen und das
+                Erreichen von Lernzielen.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
-  </div>
-  <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
@@ -153,19 +213,20 @@
     <p-divider/>
     <h3 style="text-align: center">Potentielle Probleme</h3>
     <p-accordion>
-      <p-accordionTab header="Header I">
+      <p-accordionTab header="Überforderung des Nutzers">
         <p>
-          Lorem ipsum dolor sit amet...
+          Zu viele Informationen und Funktionen können den Benutzer überfordern und den Lernprozess behindern.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header II">
+      <p-accordionTab header="Mangelnde Motivation">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Nicht alle Benutzer sind gleichermaßen motiviert, sich mit einem neuen System auseinanderzusetzen.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="Individuelle Lerngeschwindigkeit">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Benutzer lernen unterschiedlich schnell. Ein System, das für einen Benutzer optimal ist, kann für einen
+          anderen Benutzer zu langsam oder zu schnell sein.
         </p>
       </p-accordionTab>
     </p-accordion>
@@ -174,7 +235,17 @@
     <p-divider/>
     <p-fieldset legend="Ressourcenempfehlungen/Literatur" [toggleable]="true" collapsed="true">
       <p>
-        Lorem ipsum dolor sit amet...
+        <b>Bücher:</b>
+      </p>
+      <p>
+        Krug, S. (2014). Don't make me think, revisited: A common sense approach to web usability. New Riders.
+      </p>
+      <p>
+        <b>Artikel:</b>
+      </p>
+      <p>
+        Marczewski, A. (2015). Even ninja monkeys like to play: Gamification, game thinking and motivational design.
+        CreateSpace Independent Publishing Platform.
       </p>
     </p-fieldset>
   </div>
