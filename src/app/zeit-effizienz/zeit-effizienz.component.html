@@ -3,147 +3,191 @@
     <h1 style="text-align: center">Zeit/Effizienz</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Einführung</p>
+    <h4>
+      Zeit/Effizienz in Human Automation Interaction:
+    </h4>
+    <p>
+      Zeit und Effizienz spielen eine entscheidende Rolle in der Mensch-Automatisierung-Interaktion. Automationssysteme
+      sollten die Arbeitsabläufe des Benutzers beschleunigen und die Effizienz steigern, ohne dabei die Genauigkeit und
+      Zuverlässigkeit zu beeinträchtigen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Zeiteinsparung:</b> Das System sollte die Zeit reduzieren, die der Benutzer für die Erledigung seiner Aufgaben
+      benötigt.
+    </p>
+    <p class="indented-paragraph">
+      <b>Effizienzsteigerung:</b> Das System sollte den Benutzer bei seinen Aufgaben unterstützen und ihm repetitive
+      oder komplexe Schritte abnehmen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Optimierung der Arbeitsabläufe:</b> Das System sollte die Arbeitsabläufe des Benutzers optimieren und unnötige
+      Schritte eliminieren.
+    </p>
+    <h4>
+      Für wen ist Zeit/Effizienz relevant?
+    </h4>
+    <p>
+      Zeit und Effizienz sind für alle Benutzer von Automationssystemen relevant, insbesondere aber für:
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer mit hohem Arbeitsaufkommen:</b> Die ihre Aufgaben schnell und effizient erledigen müssen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer in zeitkritischen Umgebungen:</b> Wie beispielsweise in der Produktion, im Transportwesen oder im
+      Notfallmanagement.
+    </p>
     <p-divider/>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Do's</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Automatisierung repetitiver Aufgaben">
         <p>
-          Lorem ipsum dolor sit amet...
+          Automatisieren Sie repetitive und zeitaufwändige Aufgaben, um den Benutzer zu entlasten.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Optimierung der Benutzeroberfläche">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Gestalten Sie die Benutzeroberfläche so, dass der Benutzer die benötigten Informationen schnell und einfach
+          finden kann. Vermeiden Sie unnötige Klicks und Navigationsschritte.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Parallele Verarbeitung">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Ermöglichen Sie die parallele Verarbeitung von Aufgaben, um die Gesamtzeit zu reduzieren.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Echtzeit-Feedback">
+        <p>
+          Geben Sie dem Benutzer Echtzeit-Feedback über den Fortschritt der Aufgaben, um ihn über den aktuellen
+          Status zu informieren.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Optimierung der Systemleistung">
+        <p>
+          Optimieren Sie die Systemleistung, um Verzögerungen und Wartezeiten zu minimieren.
         </p>
       </p-tabPanel>
     </p-tabView>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Don'ts</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Unnötige Komplexität">
         <p>
-          Lorem ipsum dolor sit amet...
+          Gestalten Sie das System nicht unnötig komplex. Zu viele Funktionen und Optionen können den Benutzer
+          verwirren und die Bedienung verlangsamen.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Mangelnde Automatisierung">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Verpassen Sie die Gelegenheit nicht, repetitive Aufgaben zu automatisieren.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Unübersichtliche Benutzeroberfläche">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Gestalten Sie die Benutzeroberfläche nicht unübersichtlich.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Langsame Systemreaktionen">
+        <p>
+          Achten Sie auf eine schnelle Systemreaktion. Lange Wartezeiten frustrieren den Benutzer und beeinträchtigen
+          die Effizienz.
         </p>
       </p-tabPanel>
     </p-tabView>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Beispiel" [toggleable]="true" collapsed="true">
+      <p>
+        <b>Do:</b> Ein Dokumentenmanagementsystem automatisiert das Archivieren und Sortieren von Dokumenten, wodurch
+        der Benutzer Zeit spart und sich auf wichtigere Aufgaben konzentrieren kann.
+      </p>
+      <p>
+        <b>Dont:</b> Ein Online-Bestellsystem erfordert vom Benutzer die manuelle Eingabe zahlreicher Informationen, die
+        automatisch aus dem Benutzerkonto abgerufen werden könnten.
+      </p>
+    </p-fieldset>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Taskanalyse</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Führen Sie eine detaillierte Analyse der Aufgaben durch, die der Benutzer mit dem System erledigen
+                möchte. Identifizieren Sie zeitaufwändige und ineffiziente Schritte, die automatisiert oder optimiert
+                werden können.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div
+              class="justify-content-center align-items-center font-medium">
+              Bei der Entwicklung eines Buchhaltungsprogramms analysiert der Entwickler die typischen
+              Arbeitsabläufe eines Buchhalters und identifiziert Schritte wie die manuelle Eingabe von Rechnungen,
+              die automatisiert werden können.
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
     </p-stepper>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Usability-Tests</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Führen Sie Usability-Tests mit repräsentativen Benutzern durch, um die Effizienz des Systems in der
+                Praxis zu überprüfen. Beobachten Sie die Benutzer bei der Arbeit mit dem System und identifizieren Sie
+                Schwierigkeiten und Verbesserungspotenziale.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Der Entwickler eines Online-Shops beobachtet Testbenutzer beim Kaufprozess und stellt fest, dass
+                der Bestellvorgang zu viele Schritte umfasst.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
-  </div>
-  <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
@@ -153,19 +197,23 @@
     <p-divider/>
     <h3 style="text-align: center">Potentielle Probleme</h3>
     <p-accordion>
-      <p-accordionTab header="Header I">
+      <p-accordionTab header="Komplexität vs. Effizienz">
         <p>
-          Lorem ipsum dolor sit amet...
+          Die Steigerung der Effizienz kann zu einer erhöhten Komplexität des Systems führen, was wiederum die
+          Benutzerfreundlichkeit beeinträchtigen kann. Es gilt, einen optimalen Kompromiss zwischen diesen beiden
+          Zielen zu finden.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header II">
+      <p-accordionTab header="Genauigkeit vs. Geschwindigkeit">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Die Beschleunigung von Prozessen kann zu Lasten der Genauigkeit gehen. Es muss sichergestellt sein, dass
+          die Automatisierung die Qualität der Ergebnisse nicht beeinträchtigt.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="Benutzerakzeptanz">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Benutzer können sich gegen Automationssysteme wehren, die ihnen die Kontrolle über ihre Arbeit nehmen
+          oder ihre Arbeitsabläufe zu stark verändern.
         </p>
       </p-accordionTab>
     </p-accordion>
@@ -173,9 +221,6 @@
   <div class="col-12">
     <p-divider/>
     <p-fieldset legend="Ressourcenempfehlungen/Literatur" [toggleable]="true" collapsed="true">
-      <p>
-        Lorem ipsum dolor sit amet...
-      </p>
     </p-fieldset>
   </div>
 </div>
