@@ -3,147 +3,194 @@
     <h1 style="text-align: center">Vorhersehbarkeit</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Einführung</p>
+    <h4>
+      Vorhersehbarkeit in Human Automation Interaction:
+    </h4>
+    <p>
+      Die Fähigkeit des Systems, dem Benutzer ein klares Verständnis davon zu vermitteln, wie es sich in verschiedenen
+      Situationen verhalten wird. Vorhersehbare Automationssysteme sind leichter zu verstehen, zu kontrollieren und zu
+      vertrauen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Konsistenz:</b> Das System verhält sich in ähnlichen Situationen immer auf die gleiche Weise.
+    </p>
+    <p class="indented-paragraph">
+      <b>Transparenz:</b> Der Benutzer versteht die Gründe für die Aktionen und Entscheidungen des Systems.
+    </p>
+    <p class="indented-paragraph">
+      <b>Erklärbarkeit:</b> Das System kann seine Entscheidungen und Aktionen dem Benutzer verständlich erklären.
+    </p>
+    <h4>
+      Für wen ist Vorhersehbarkeit relevant?
+    </h4>
+    <p>
+      Vorhersehbarkeit ist für alle Benutzer von Automationssystemen relevant, insbesondere aber für:
+    </p>
+    <p class="indented-paragraph">
+      <b>Unerfahrene Benutzer:</b> Die noch lernen, mit dem System umzugehen und sich auf ein konsistentes Verhalten
+      verlassen müssen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer in komplexen Umgebungen:</b> Wo unerwartete Ereignisse eintreten können und das System in der Lage
+      sein muss, angemessen zu reagieren.
+    </p>
     <p-divider/>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Do's</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Klare Regeln und Muster">
         <p>
-          Lorem ipsum dolor sit amet...
+          Entwickeln Sie klare Regeln und Muster für das Systemverhalten. Vermeiden Sie unnötige Variationen und
+          Ausnahmen.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Konsistentes Design">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Verwenden Sie ein konsistentes Design für die Benutzeroberfläche und die Systemreaktionen. Der Benutzer sollte
+          sich leicht orientieren können und wissen, was ihn erwartet.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Frühzeitige Hinweise">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Geben Sie dem Benutzer frühzeitig Hinweise auf bevorstehende Aktionen oder Änderungen im Systemverhalten.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Eindeutige Signale">
+        <p>
+          Verwenden Sie eindeutige Signale, um den Benutzer über den Systemzustand und seine Aktionen zu informieren.
         </p>
       </p-tabPanel>
     </p-tabView>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Don'ts</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Inkonsistentes Verhalten">
         <p>
-          Lorem ipsum dolor sit amet...
+          Vermeiden Sie inkonsistentes Systemverhalten. Der Benutzer sollte sich darauf verlassen können, dass das
+          System in ähnlichen Situationen immer gleich reagiert.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Unverständliche Aktionen">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Führen Sie keine Aktionen aus, die der Benutzer nicht nachvollziehen kann.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Plötzliche Änderungen">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Vermeiden Sie plötzliche und unerwartete Änderungen im Systemverhalten.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Unklare Signale">
+        <p>
+          Verwenden Sie keine uneindeutigen oder irreführenden Signale.
         </p>
       </p-tabPanel>
     </p-tabView>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Beispiel" [toggleable]="true" collapsed="true">
+      <p>
+        <b>Do:</b> Ein autonomes Fahrzeug signalisiert dem Fahrer rechtzeitig, wenn es die Spur wechseln möchte.
+      </p>
+      <p>
+        <b>Dont:</b> Ein Roboterarm führt plötzlich eine unerwartete Bewegung aus, die den Benutzer erschreckt.
+      </p>
+    </p-fieldset>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Mentale Modelle (Lichtenthäler et al., 2012)</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Gestalten Sie das System so, dass es den mentalen Modellen des Benutzers entspricht. Der Benutzer sollte
+                die Funktionsweise des Systems intuitiv verstehen können.
+              </p>
+              <p class="indented-paragraph">
+                <b>Analogien:</b> Verwenden Sie Analogien zu bekannten Systemen oder Prozessen, um dem Benutzer das
+                Verständnis zu erleichtern.
+              </p>
+              <p class="indented-paragraph">
+                <b>Konzepte:</b> Stellen Sie sicher, dass das Systemverhalten mit den Erwartungen des Benutzers an die
+                zugrundeliegenden Konzepte übereinstimmt.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div
+              class="justify-content-center align-items-center font-medium">
+              Ein Roboter, der Getränke serviert, bewegt sich auf eine Weise, die der eines menschlichen Kellners
+              ähnelt.
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
     </p-stepper>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Machine Learning (ML)</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Trainieren Sie das System mit Machine Learning, um aus Daten zu lernen und sein Verhalten an die
+                Bedürfnisse des Benutzers anzupassen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Mustererkennung:</b> ML-Algorithmen können Muster im Benutzerverhalten erkennen und das
+                Systemverhalten entsprechend anpassen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Personalisierung:</b> ML kann verwendet werden, um das System an die individuellen Vorlieben des
+                Benutzers anzupassen.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Ein Musik-Streaming-Dienst lernt aus den Hörgewohnheiten des Benutzers und schlägt neue Musik vor, die
+                ihm gefallen könnte.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
-  </div>
-  <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
@@ -153,19 +200,26 @@
     <p-divider/>
     <h3 style="text-align: center">Potentielle Probleme</h3>
     <p-accordion>
-      <p-accordionTab header="Header I">
+      <p-accordionTab header="Komplexität der Implementierung">
         <p>
-          Lorem ipsum dolor sit amet...
+          Die Implementierung von vorhersehbarem Verhalten kann in komplexen Systemen schwierig sein.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header II">
+      <p-accordionTab header="Eingeschränkte Flexibilität">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Zu starre Regeln und Muster können die Flexibilität des Systems einschränken.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="Unvorhergesehene Situationen">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Es ist unmöglich, alle potenziellen Situationen im Voraus zu berücksichtigen. Das System muss in der Lage
+          sein, auch in unerwarteten Situationen angemessen zu reagieren.
+        </p>
+      </p-accordionTab>
+      <p-accordionTab header="Bias in Machine Learning">
+        <p>
+          ML-Algorithmen können durch die Trainingsdaten beeinflusst werden und unerwünschte Verzerrungen (Bias) im
+          Systemverhalten erzeugen.
         </p>
       </p-accordionTab>
     </p-accordion>
@@ -174,7 +228,24 @@
     <p-divider/>
     <p-fieldset legend="Ressourcenempfehlungen/Literatur" [toggleable]="true" collapsed="true">
       <p>
-        Lorem ipsum dolor sit amet...
+        <b>Artikel:</b>
+      </p>
+      <p>
+        Lichtenthäler, C., Lorenzy, T., & Kirsch, A. (2012). Influence of legibility on perceived safety in a virtual
+        human-robot path crossing task. In 2012 IEEE RO-MAN: The 21st IEEE International Symposium on Robot and Human
+        Interactive Communication (pp. 676-681). IEEE.
+      </p>
+      <p>
+        <b>Bücher:</b>
+      </p>
+      <p>
+        Norman, D. A. (2013). The design of everyday things: Revised and expanded edition. Basic books.
+      </p>
+      <p>
+        <b>Websites:</b>
+      </p>
+      <p>
+        Interaction Design Foundation: <a href="https://www.interaction-design.org/" target="_blank">https://www.interaction-design.org/</a>
       </p>
     </p-fieldset>
   </div>
