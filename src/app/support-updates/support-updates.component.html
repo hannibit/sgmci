@@ -3,147 +3,210 @@
     <h1 style="text-align: center">Support/Updates</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Einführung</p>
+    <h4>
+      Support/Updates des Systems in Human Automation Interaction:
+    </h4>
+    <p>
+      Ein wichtiger Aspekt der Mensch-Automatisierung-Interaktion ist die Bereitstellung von angemessenem Support und
+      regelmäßigen Updates für das System. Dies stellt sicher, dass das System funktionsfähig bleibt, Sicherheitslücken
+      geschlossen werden und neue Funktionen integriert werden können. Ein guter Support und regelmäßige Updates tragen
+      maßgeblich zur Benutzerzufriedenheit und zum langfristigen Vertrauen in das System bei.
+    </p>
+    <p class="indented-paragraph">
+      <b>Support:</b> Benutzerfreundliche und leicht zugängliche Unterstützung bei Problemen oder Fragen zur Bedienung
+      des Systems.
+    </p>
+    <p class="indented-paragraph">
+      <b>Updates:</b> Regelmäßige Aktualisierungen der Software, um Fehler zu beheben, Sicherheitslücken zu schließen
+      und neue Funktionen hinzuzufügen.
+    </p>
+    <h4>
+      Für wen sind Support/Updates des Systems relevant?
+    </h4>
+    <p>
+      Support und Updates sind für alle Benutzer von Automationssystemen relevant, insbesondere aber für:
+    </p>
+    <p class="indented-paragraph">
+      <b>Alle Benutzer:</b> Jeder Benutzer kann auf Probleme stoßen oder von neuen Funktionen profitieren.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer in sicherheitskritischen Umgebungen:</b> Sicherheitsupdates sind essentiell, um die Sicherheit des
+      Systems zu gewährleisten.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer, die das System intensiv nutzen:</b> Regelmäßige Updates können die Leistung und Effizienz des Systems
+      verbessern.
+    </p>
     <p-divider/>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Do's</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Mehrere Supportkanäle">
         <p>
-          Lorem ipsum dolor sit amet...
+          Bieten Sie verschiedene Supportkanäle an, z. B. Telefon, E-Mail, Online-Chat oder ein Forum, um Benutzern die
+          Kontaktaufnahme zu erleichtern.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Benutzerfreundliche Update-Prozesse">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Gestalten Sie den Update-Prozess so einfach und benutzerfreundlich wie möglich.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Feedback einholen">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Fragen Sie Benutzer regelmäßig nach Feedback zum System und zum Support, um Verbesserungspotenziale zu
+          identifizieren.
         </p>
       </p-tabPanel>
     </p-tabView>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Don'ts</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Eingeschränkter Support">
         <p>
-          Lorem ipsum dolor sit amet...
+          Beschränken Sie die Supportmöglichkeiten nicht. Benutzer sollten verschiedene Möglichkeiten haben, um Hilfe zu
+          erhalten.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Mangelnde Dokumentation">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Vernachlässigen Sie die Dokumentation nicht. Eine gute Dokumentation ist essentiell, um Benutzern den Umgang
+          mit dem System zu erleichtern.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Seltene Updates">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Veröffentlichen Sie Updates nicht zu selten. Fehler und Sicherheitslücken sollten schnellstmöglich behoben
+          werden.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Komplizierte Update-Prozesse">
+        <p>
+          Gestalten Sie den Update-Prozess nicht zu kompliziert. Benutzer sollten Updates einfach und schnell
+          installieren können.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Feedback ignorieren">
+        <p>
+          Ignorieren Sie Feedback von Benutzern nicht. Feedback kann wertvolle Hinweise auf Verbesserungspotenziale
+          liefern.
         </p>
       </p-tabPanel>
     </p-tabView>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Beispiel" [toggleable]="true" collapsed="true">
+      <p>
+        <b>Do:</b> Ein Hersteller von Smart-Home-Geräten bietet seinen Kunden eine App an, die regelmäßige
+        Software-Updates für die Geräte bereitstellt und eine einfache Möglichkeit zur Kontaktaufnahme mit dem
+        Kundensupport bietet.
+      </p>
+      <p>
+        <b>Dont:</b> Die Software eines Industrieroboters ist veraltet und es gibt keine Möglichkeit, Sicherheitsupdates
+        zu installieren.
+      </p>
+    </p-fieldset>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Kontinuierliche Integration und Deployment (CI/CD)</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Verwenden Sie CI/CD, um die Entwicklung, das Testen und die Bereitstellung von Updates zu automatisieren
+                und zu beschleunigen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Automatische Tests:</b> Stellen Sie sicher, dass Updates keine Fehler enthalten, bevor sie
+                veröffentlicht werden.
+              </p>
+              <p class="indented-paragraph">
+                <b>Schnelle Bereitstellung:</b> Veröffentlichen Sie Updates schnell und effizient, um Benutzern die
+                neuesten Funktionen und Sicherheitsverbesserungen zeitnah zur Verfügung zu stellen.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div
+              class="justify-content-center align-items-center font-medium">
+              Ein Softwareunternehmen verwendet CI/CD, um Updates für seine mobile App zu veröffentlichen.
+              Automatische Tests stellen sicher, dass die Updates keine Fehler enthalten, und die Updates werden
+              automatisch an die Benutzer verteilt.
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
     </p-stepper>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">User Feedback</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Nutzen Sie Feedback von Benutzern, um das System kontinuierlich zu verbessern und an die Bedürfnisse der
+                Benutzer anzupassen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Feedback-Formulare:</b> Stellen Sie Benutzern Formulare zur Verfügung, um Feedback zum System
+                und zum Support zu geben.
+              </p>
+              <p class="indented-paragraph">
+                <b>Benutzerbefragungen:</b> Führen Sie regelmäßige Benutzerbefragungen durch, um die Zufriedenheit der
+                Benutzer mit dem System zu erfassen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Analyse von Supportanfragen:</b> Identifizieren Sie häufig auftretende Probleme und entwickeln Sie
+                Lösungen, um diese zu beheben.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Ein Softwareunternehmen analysiert die Supportanfragen seiner Kunden und stellt fest, dass viele
+                Benutzer Probleme mit einer bestimmten Funktion haben. Das Unternehmen veröffentlicht ein Update,
+                das die Funktion verbessert und die Bedienung vereinfacht.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
-  </div>
-  <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
@@ -153,19 +216,19 @@
     <p-divider/>
     <h3 style="text-align: center">Potentielle Probleme</h3>
     <p-accordion>
-      <p-accordionTab header="Header I">
+      <p-accordionTab header="Kosten für Support und Updates">
         <p>
-          Lorem ipsum dolor sit amet...
+          Die Bereitstellung von Support und die Entwicklung von Updates verursachen Kosten.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header II">
+      <p-accordionTab header="Kompatibilitätsprobleme">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Updates können Kompatibilitätsprobleme mit anderen Systemen oder Hardware verursachen.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="Unerwünschte Änderungen">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Updates können unerwünschte Änderungen am Systemverhalten mit sich bringen.
         </p>
       </p-accordionTab>
     </p-accordion>
@@ -174,7 +237,20 @@
     <p-divider/>
     <p-fieldset legend="Ressourcenempfehlungen/Literatur" [toggleable]="true" collapsed="true">
       <p>
-        Lorem ipsum dolor sit amet...
+        <b>Artikel:</b>
+      </p>
+      <p>
+        Fitzpatrick, K., & Collins, R. (2017). The continuous integration and continuous delivery (CI/CD) pipeline. In
+        DevOps for Dummies (pp. 145-158). John Wiley & Sons.
+      </p>
+      <p>
+        <b>Websites:</b>
+      </p>
+      <p>
+        Atlassian: <a href="https://www.atlassian.com/" target="_blank">https://www.atlassian.com/</a>
+      </p>
+      <p>
+        GitLab: <a href="https://about.gitlab.com/" target="_blank">https://about.gitlab.com/</a>
       </p>
     </p-fieldset>
   </div>
