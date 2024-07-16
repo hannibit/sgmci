@@ -3,169 +3,198 @@
     <h1 style="text-align: center">Korrektheit</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Einführung</p>
+    <h4>
+      Korrektheit in Human Automation Interaction:
+    </h4>
+    <p>
+      Korrektheit in der Mensch-Automatisierung-Interaktion bezieht sich auf die Fähigkeit des Systems,
+      zuverlässig und fehlerfrei die Aufgaben zu erledigen, für die es entwickelt wurde. Das beinhaltet:
+    </p>
+    <p class="indented-paragraph">
+      <b>Genauigkeit:</b> Das System liefert präzise und korrekte Ergebnisse, die den Erwartungen des Benutzers
+      entsprechen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Zuverlässigkeit:</b> Das System funktioniert konsistent und fehlerfrei, auch unter wechselnden Bedingungen und
+      bei unerwarteten Eingaben.
+    </p>
+    <p class="indented-paragraph">
+      <b>Robustheit:</b> Das System ist widerstandsfähig gegenüber Fehlern und Ausfällen und kann auch in schwierigen
+      Situationen zuverlässig arbeiten.
+    </p>
+    <h4>
+      Für wen ist Korrektheit relevant?
+    </h4>
+    <p>
+      Korrektheit ist für alle Benutzer von Automationssystemen relevant, insbesondere aber für:
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer, die auf präzise Ergebnisse angewiesen sind:</b> Wie beispielsweise in der Medizin, im Finanzwesen
+      oder
+      in der Luftfahrt.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer, die in sicherheitskritischen Umgebungen arbeiten:</b> Wo Fehler schwerwiegende Konsequenzen haben
+      können.
+    </p>
     <p-divider/>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Do's</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Gründliche Tests">
         <p>
-          Lorem ipsum dolor sit amet...
+          Testen Sie das System gründlich unter verschiedenen Bedingungen und mit unterschiedlichen Eingaben.
+          Beziehen Sie sowohl typische als auch untypische Anwendungsfälle in die Tests ein.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Fehlerbehandlung">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Implementieren Sie eine robuste Fehlerbehandlung, die Fehler erkennt, meldet und gegebenenfalls
+          korrigiert. Geben Sie dem Benutzer klare und verständliche Informationen über aufgetretene Fehler.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Qualitätsstandards">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Halten Sie sich an etablierte Qualitätsstandards und Best Practices für die Entwicklung von
+          Automationssystemen.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Validierung der Ergebnisse">
+        <p>
+          Ermöglichen Sie dem Benutzer, die Ergebnisse des Systems zu validieren und zu überprüfen. Stellen Sie
+          dafür geeignete Werkzeuge und Informationen bereit.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Kontinuierliche Verbesserung">
+        <p>
+          Überwachen Sie das System kontinuierlich auf Fehler und verbessern Sie es kontinuierlich, um die
+          Korrektheit zu gewährleisten.
         </p>
       </p-tabPanel>
     </p-tabView>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Don'ts</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Unzureichende Tests">
         <p>
-          Lorem ipsum dolor sit amet...
+          Verlassen Sie sich nicht auf unzureichende Tests. Testen Sie das System so lange und so umfassend, bis Sie
+          sicher sind, dass es korrekt funktioniert.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Mangelnde Fehlerbehandlung">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Vernachlässigen Sie die Fehlerbehandlung nicht. Fehler können jederzeit auftreten, und das System muss
+          darauf vorbereitet sein.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Ignorieren von Qualitätsstandards">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Ignorieren Sie etablierte Qualitätsstandards nicht. Diese Standards basieren auf jahrelanger Erfahrung und
+          helfen Ihnen, korrekte und zuverlässige Systeme zu entwickeln.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Keine Validierung durch den Benutzer">
+        <p>
+          Ermöglichen Sie dem Benutzer nicht, die Ergebnisse des Systems zu validieren. Der Benutzer sollte immer
+          die Möglichkeit haben, die Ergebnisse des Systems zu überprüfen und zu hinterfragen.
         </p>
       </p-tabPanel>
     </p-tabView>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Beispiel" [toggleable]="true" collapsed="true">
+      <p>
+        <b>Do:</b> Ein medizinisches Diagnosesystem wird mit einer großen Anzahl von Patientendaten trainiert und
+        getestet, um sicherzustellen, dass es zuverlässig Krankheiten erkennt.
+      </p>
+      <p>
+        <b>Dont:</b> Ein automatisiertes Handelssystem wird ohne ausreichende Tests in den Live-Betrieb genommen,
+        was zu hohen finanziellen Verlusten führen kann.
+      </p>
+    </p-fieldset>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Formal Verifikation</h4>
     <p-stepper>
-      <p-stepperPanel header="Beschreibung">
+      <p-stepperPanel>
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Formale Verifikation ist ein mathematischer Ansatz, um die Korrektheit von Systemen zu beweisen. Sie
+                verwendet formale Spezifikationen und mathematische Beweise, um zu zeigen, dass das System die
+                gewünschten Eigenschaften erfüllt.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Die Korrektheit eines Flugsteuerungssystems wird durch formale Verifikation bewiesen, um
+                sicherzustellen, dass es unter allen Umständen zuverlässig funktioniert.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
     </p-stepper>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
-  </div>
-  <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
+    <h4 style="text-align: center">Software Testing</h4>
+    <p>
+      Software Testing ist ein wesentlicher Bestandteil der Softwareentwicklung und dient dazu, Fehler in der
+      Software zu finden und zu beheben. Es gibt verschiedene Arten von Softwaretests, wie z. B.:
+    </p>
+    <p class="indented-paragraph">
+      <b>Unit-Tests:</b> Testen einzelne Komponenten der Software.
+    </p>
+    <p class="indented-paragraph">
+      <b>Integrationstests:</b> Testen das Zusammenspiel mehrerer Komponenten.
+    </p>
+    <p class="indented-paragraph">
+      <b>Systemtests:</b> Testen das gesamte System.
+    </p>
+    <p class="indented-paragraph">
+      <b>Akzeptanztests:</b> Testen, ob das System die Anforderungen des Benutzers erfüllt.
+    </p>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Potentielle Probleme</h3>
     <p-accordion>
-      <p-accordionTab header="Header I">
+      <p-accordionTab header="Komplexität des Systems">
         <p>
-          Lorem ipsum dolor sit amet...
+          Die Korrektheit von komplexen Systemen kann schwierig zu gewährleisten sein.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header II">
+      <p-accordionTab header="Unerwartete Eingaben">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Das System kann auf unerwartete Eingaben oder Situationen fehlerhaft reagieren.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="Menschliche Fehler">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Auch bei korrekten Systemen können menschliche Fehler zu Problemen führen.
         </p>
       </p-accordionTab>
     </p-accordion>
@@ -174,7 +203,11 @@
     <p-divider/>
     <p-fieldset legend="Ressourcenempfehlungen/Literatur" [toggleable]="true" collapsed="true">
       <p>
-        Lorem ipsum dolor sit amet...
+        <b>Websites:</b>
+      </p>
+      <p>
+        ISTQB - International Software Testing Qualifications Board: <a href="https://www.istqb.org/"
+                                                                        target="_blank">https://www.istqb.org/</a>
       </p>
     </p-fieldset>
   </div>
