@@ -3,147 +3,197 @@
     <h1 style="text-align: center">Verfügbarkeit</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Einführung</p>
+    <h4>
+      Verfügbarkeit des Systems in Human Automation Interaction:
+    </h4>
+    <p>
+      Beschreibt das Ausmaß, in dem ein Automationssystem zuverlässig und ohne Unterbrechungen für den Benutzer
+      verfügbar ist. Eine hohe Verfügbarkeit ist entscheidend für die Akzeptanz und das Vertrauen in das System,
+      insbesondere wenn der Benutzer von dessen Funktion abhängig ist.
+    </p>
+    <p class="indented-paragraph">
+      <b>Zuverlässigkeit:</b> Das System funktioniert stabil und fehlerfrei über einen längeren Zeitraum.
+    </p>
+    <p class="indented-paragraph">
+      <b>Wartungsfreundlichkeit:</b> Das System kann einfach gewartet und repariert werden, um Ausfallzeiten zu
+      minimieren.
+    </p>
+    <p class="indented-paragraph">
+      <b>Robustheit:</b> Das System ist widerstandsfähig gegenüber äußeren Einflüssen und Störungen.
+    </p>
+    <h4>
+      Für wen ist die Verfügbarkeit des Systems relevant?
+    </h4>
+    <p>
+      Die Verfügbarkeit des Systems ist für alle Benutzer von Automationssystemen relevant, insbesondere aber für:
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer, die das System für kritische Aufgaben verwenden:</b> Wie beispielsweise in der Produktion, im
+      Gesundheitswesen oder im Transportwesen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer, die vom System abhängig sind:</b> Wie beispielsweise Menschen mit Behinderungen, die auf
+      Assistenzsysteme angewiesen sind.
+    </p>
     <p-divider/>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Do's</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Redundante Systeme">
         <p>
-          Lorem ipsum dolor sit amet...
+          Implementieren Sie redundante Systeme, die bei Ausfall einer Komponente die Funktion übernehmen können.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Proaktive Wartung">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Führen Sie regelmäßige Wartungen durch, um potenzielle Probleme frühzeitig zu erkennen und zu beheben.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Fehlertolerantes Design">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Entwickeln Sie ein fehlertolerantes System, das auch bei Auftreten von Fehlern weiterarbeiten kann.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Überwachung des Systemzustands">
+        <p>
+          Überwachen Sie den Systemzustand kontinuierlich, um Anzeichen für potenzielle Ausfälle frühzeitig zu erkennen.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Einfache Wartung und Reparatur">
+        <p>
+          Gestalten Sie das System so, dass es einfach zu warten und zu reparieren ist.
         </p>
       </p-tabPanel>
     </p-tabView>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Don'ts</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Single Point of Failure">
         <p>
-          Lorem ipsum dolor sit amet...
+          Vermeiden Sie Single Points of Failure, also Komponenten, deren Ausfall das gesamte System lahmlegt.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Vernachlässigung der Wartung">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Vernachlässigen Sie die Wartung des Systems nicht.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Komplexes Design">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Gestalten Sie das System nicht unnötig komplex, da dies die Wartung und Reparatur erschwert.
         </p>
       </p-tabPanel>
     </p-tabView>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Beispiel" [toggleable]="true" collapsed="true">
+      <p>
+        <b>Do:</b> Ein Server-System in einem Krankenhaus verfügt über redundante Stromversorgung und
+        Netzwerkverbindungen, um die Verfügbarkeit der Patientendaten zu gewährleisten.
+      </p>
+      <p>
+        <b>Dont:</b> Ein autonomer Lieferroboter hat nur einen Akku und keine Möglichkeit, diesen unterwegs aufzuladen,
+        was zu Ausfällen während der Lieferung führen kann.
+      </p>
+    </p-fieldset>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Redundanz</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Verwenden Sie redundante Komponenten, um die Ausfallsicherheit des Systems zu erhöhen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Hardware-Redundanz:</b> Doppelte oder mehrfache Hardware-Komponenten (z. B. Server, Sensoren,
+                Aktoren).
+              </p>
+              <p class="indented-paragraph">
+                <b>Software-Redundanz:</b> Mehrere Versionen derselben Software, die bei Ausfall einer Version
+                einspringen können.
+              </p>
+              <p class="indented-paragraph">
+                <b>Daten-Redundanz:</b> Sicherungskopien von wichtigen Daten, die bei Verlust wiederhergestellt werden
+                können.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div
+              class="justify-content-center align-items-center font-medium">
+              Ein Flugzeug hat mehrere Triebwerke, so dass es auch bei Ausfall eines Triebwerks sicher landen kann.
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
     </p-stepper>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
+    <h4 style="text-align: center">Wartung und Reparatur</h4>
     <p-stepper>
       <p-stepperPanel header="Beschreibung">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Planen Sie regelmäßige Wartungen und Reparaturen ein, um die Lebensdauer des Systems zu verlängern und
+                Ausfallzeiten zu minimieren.
+              </p>
+              <p class="indented-paragraph">
+                <b>Vorbeugende Wartung:</b> Regelmäßige Inspektionen und Austausch von Verschleißteilen.
+              </p>
+              <p class="indented-paragraph">
+                <b>Korrektive Wartung:</b> Reparatur von defekten Komponenten.
+              </p>
+              <p class="indented-paragraph">
+                <b>Predictive Maintenance:</b> Vorhersage von Ausfällen mithilfe von Sensordaten und Machine Learning.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-end">
             <p-button
-              label="Next"
+              label="Beispiel"
               icon="pi pi-arrow-right"
               iconPos="right"
-              (onClick)="nextCallback.emit()" />
+              (onClick)="nextCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
       <p-stepperPanel header="Beispiel">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
+          <div class="flex flex-column">
+            <div class="justify-content-center align-items-center font-medium">
+              <p>
+                Ein Windkraftanlagenbetreiber führt regelmäßige Inspektionen und Wartungen durch, um die Verfügbarkeit
+                der Anlage zu maximieren.
+              </p>
             </div>
           </div>
           <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
-  </div>
-  <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+            <p-button label="Beschreibung" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()"/>
           </div>
         </ng-template>
       </p-stepperPanel>
@@ -153,19 +203,20 @@
     <p-divider/>
     <h3 style="text-align: center">Potentielle Probleme</h3>
     <p-accordion>
-      <p-accordionTab header="Header I">
+      <p-accordionTab header="Kosten für Redundanz">
         <p>
-          Lorem ipsum dolor sit amet...
+          Redundante Systeme können zusätzliche Kosten verursachen.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header II">
+      <p-accordionTab header="Komplexität der Wartung">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Die Wartung komplexer Systeme kann aufwendig und teuer sein.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="Externe Faktoren">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Die Verfügbarkeit des Systems kann durch externe Faktoren wie Stromausfälle oder Naturkatastrophen
+          beeinträchtigt werden.
         </p>
       </p-accordionTab>
     </p-accordion>
@@ -173,9 +224,6 @@
   <div class="col-12">
     <p-divider/>
     <p-fieldset legend="Ressourcenempfehlungen/Literatur" [toggleable]="true" collapsed="true">
-      <p>
-        Lorem ipsum dolor sit amet...
-      </p>
     </p-fieldset>
   </div>
 </div>
