@@ -5,12 +5,14 @@
   <div class="col-12">
     <p style="text-align: center">Willkommen im Dashboard. Hier können Sie auf die Funktionalitäten dieser Anwendung
       zugreifen.</p>
-    <p style="text-align: center">...</p>
+    <p style="text-align: center"></p>
     <p style="text-align: center">Wählen Sie eine der folgenden Optionen aus:</p>
   </div>
   <div class="col-6">
     <p-card header="Fragebogen">
-      <p style="padding-bottom: 5px; text-align: center">Sie sind sich nicht sicher, welcher...</p>
+      <p style="padding-bottom: 5px; text-align: center">Sie sind sich nicht sicher, welcher Aspekt eines
+        automatisierten Systems bei Ihnen zu Unsicherheiten führt? Unser Fragebogen hilft Ihnen, Ihre Präferenzen zu
+        identifizieren und die Teilgebiete aufzuzeigen, die für Sie am wichtigsten sind.</p>
       <ng-template pTemplate="footer">
         <div>
           <p-button (click)="fragebogen()">Test starten</p-button>
@@ -20,8 +22,10 @@
   </div>
   <div class="col-6">
     <p-card header="Teilgebiete">
-      <p style="padding-bottom: 5px; text-align: center">Hier finden Sie eine Übersicht über die Teilgebiete,
-        die... </p>
+      <p style="padding-bottom: 5px; text-align: center">Hier finden Sie eine Übersicht über die Teilgebiete, die das
+        Vertrauen in automatisierte Systeme beeinflussen. Erfahren Sie mehr über die Bedeutung von Transparenz,
+        Kontrollgefühl, Sicherheit, Vorhersehbarkeit, Verfügbarkeit, Erfahrung und Bekanntheit des Systems,
+        Zeit/Effizienz sowie Support und Updates.</p>
       <ng-template pTemplate="footer">
         <div>
           <p-button (click)="teilgebiete()">Teilgebiete anzeigen</p-button>
@@ -32,7 +36,7 @@
   <div class="col-12">
     <p-card header="FAQ">
       <p style="padding-bottom: 5px; text-align: center">Sollten Sie offene Fragen haben, werden diese hier
-        beantwortet...</p>
+        beantwortet.</p>
       <ng-template pTemplate="footer">
         <div>
           <p-button (click)="faq()">FAQ öffnen</p-button>
