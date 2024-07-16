@@ -3,169 +3,186 @@
     <h1 style="text-align: center">Komfort</h1>
   </div>
   <div class="col-12">
-    <p style="text-align: center">Einführung</p>
+    <h4>
+      Komfort in Human Automation Interaction:
+    </h4>
+    <p>
+      Komfort in der Mensch-Automatisierung-Interaktion bezieht sich auf das subjektive Wohlbefinden und die
+      positive Erfahrung des Benutzers während der Interaktion mit einem automatisierten System. Es umfasst Aspekte wie:
+    </p>
+    <p class="indented-paragraph">
+      <b>Angenehme Interaktion:</b> Das System sollte einfach zu bedienen und intuitiv verständlich sein. Die Interaktion
+      sollte flüssig und natürlich erfolgen, ohne den Benutzer zu frustrieren.
+    </p>
+    <p class="indented-paragraph">
+      <b>Stressreduktion:</b> Das System sollte den Benutzer bei seinen Aufgaben unterstützen und ihm Arbeit abnehmen,
+      anstatt ihn zusätzlich zu belasten.
+    </p>
+    <p class="indented-paragraph">
+      <b>Positive Emotionen:</b> Die Interaktion mit dem System sollte positive Emotionen wie Freude, Zufriedenheit und
+      Vertrauen hervorrufen.
+    </p>
+    <h4>
+      Für wen ist Komfort relevant?
+    </h4>
+    <p>
+      Komfort ist für alle Benutzer von Automationssystemen relevant, insbesondere aber für:
+    </p>
+    <p class="indented-paragraph">
+      <b>Häufige Benutzer:</b> Die regelmäßig mit dem System interagieren und deren Arbeitszufriedenheit von der
+      positiven Erfahrung abhängt.
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzer in sensiblen Umgebungen:</b> Wie im Gesundheitswesen oder in der Pflege, wo eine angenehme und
+      stressfreie Interaktion besonders wichtig ist.
+    </p>
+    <p>
+      Diese Guideline soll Entwicklern helfen, komfortable Automationssysteme zu gestalten, die von den Benutzern
+      akzeptiert werden und eine langfristige Nutzung fördern.
+    </p>
     <p-divider/>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Do's</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Benutzerfreundliche Gestaltung">
         <p>
-          Lorem ipsum dolor sit amet...
+          Gestalten Sie die Benutzeroberfläche des Systems übersichtlich, intuitiv und leicht verständlich. Achten Sie
+          auf eine klare Struktur, einfache Navigation und eine konsistente Bedienung.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Personalisierung">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Ermöglichen Sie dem Benutzer, das System an seine individuellen Bedürfnisse anzupassen, z. B. durch die
+          Wahl von Sprache, Schriftgröße oder Farbschema.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Angemessenes Feedback">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Geben Sie dem Benutzer ein angemessenes Feedback auf seine Eingaben. Das Feedback sollte klar, deutlich
+          und informativ sein. Vermeiden Sie negatives Feedback, das den Benutzer frustrieren könnte.
+        </p>
+      </p-tabPanel>
+      <p-tabPanel header="Fehlertoleranz">
+        <p>
+          Gestalten Sie das System so, dass es fehlertolerant ist und den Benutzer bei Fehlern unterstützt. Vermeiden
+          Sie Fehlermeldungen, die den Benutzer verunsichern.
         </p>
       </p-tabPanel>
     </p-tabView>
   </div>
   <div class="col-6">
     <h3 style="text-align: center">Don'ts</h3>
-    <p-tabView>
-      <p-tabPanel header="Header I">
+    <p-tabView [scrollable]="true">
+      <p-tabPanel header="Komplexe Bedienung">
         <p>
-          Lorem ipsum dolor sit amet...
+          Gestalten Sie die Bedienung des Systems nicht zu komplex. Vermeiden Sie unnötige Schritte und komplizierte
+          Eingabemasken.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header II">
+      <p-tabPanel header="Unzureichendes Feedback">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Geben Sie dem Benutzer nicht zu wenig Feedback. Der Benutzer sollte immer wissen, was das System gerade
+          tut und wie er es beeinflussen kann.
         </p>
       </p-tabPanel>
-      <p-tabPanel header="Header III">
+      <p-tabPanel header="Negatives Feedback">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Vermeiden Sie negatives Feedback, das den Benutzer frustrieren könnte. Formulieren Sie Fehlermeldungen
+          konstruktiv und hilfsbereit.
         </p>
       </p-tabPanel>
     </p-tabView>
+  </div>
+  <div class="col-12">
+    <p-fieldset legend="Beispiel" [toggleable]="true" collapsed="true">
+      <p>
+        <b>Do:</b> Ein Sprachassistent erkennt den Benutzer anhand seiner Stimme und begrüßt ihn mit seinem Namen.
+      </p>
+      <p>
+        <b>Dont:</b> Eine Kassenautomat in einem Supermarkt gibt dem Benutzer nach jedem Scanvorgang ein lautes,
+        schrilles Signal.
+      </p>
+    </p-fieldset>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Entwicklungsprinzipien</h3>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
+    <h4 style="text-align: center">Gestaltungsprinzipien nach DIN EN ISO 9241-110</h4>
+    <p>
+      Die Norm DIN EN ISO 9241-110:2020 definiert sieben Gestaltungsprinzipien für die Dialoggestaltung, die zur
+      Steigerung des Komforts beitragen:
+    </p>
+    <p class="indented-paragraph">
+      <b>Aufgabenangemessenheit:</b> Das System sollte den Benutzer bei der Erledigung seiner Aufgaben optimal
+      unterstützen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Selbstbeschreibungsfähigkeit:</b> Das System sollte dem Benutzer jederzeit verständlich machen, was es
+      gerade tut und wie er es beeinflussen kann.
+    </p>
+    <p class="indented-paragraph">
+      <b>Steuerbarkeit:</b> Der Benutzer sollte das System jederzeit kontrollieren und seinen Ablauf beeinflussen
+      können.
+    </p>
+    <p class="indented-paragraph">
+      <b>Fehlertoleranz:</b> Das System sollte fehlertolerant sein und den Benutzer bei Fehlern unterstützen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Individualisierbarkeit:</b> Das System sollte sich an die individuellen Bedürfnisse des Benutzers anpassen
+      lassen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Lernförderlichkeit:</b> Das System sollte den Benutzer beim Lernen und Aneignen neuer Funktionen
+      unterstützen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Erwartungskonformität:</b> Das System sollte sich an die Erwartungen des Benutzers halten und keine
+      Überraschungen bereithalten.
+    </p>
   </div>
   <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
-  </div>
-  <div class="col-6">
-    <h5 style="text-align: center">Beispiel</h5>
-    <p-stepper>
-      <p-stepperPanel header="Beschreibung">
-        <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content I
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-end">
-            <p-button
-              label="Next"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              (onClick)="nextCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-      <p-stepperPanel header="Beispiel">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-          <div class="flex flex-column h-12rem">
-            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-              Content III
-            </div>
-          </div>
-          <div class="flex pt-4 justify-content-start">
-            <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-          </div>
-        </ng-template>
-      </p-stepperPanel>
-    </p-stepper>
+    <h4 style="text-align: center">User Experience (UX) Design</h4>
+    <p>
+      UX-Design konzentriert sich auf die Gestaltung von positiven und angenehmen Benutzererlebnissen. Es
+      berücksichtigt die Bedürfnisse, Wünsche und Erwartungen des Benutzers und versucht, diese durch eine
+      ganzheitliche Gestaltung des Systems zu erfüllen.
+    </p>
+    <p>
+      <b>Wichtige Aspekte des UX-Designs sind:</b>
+    </p>
+    <p class="indented-paragraph">
+      <b>Benutzerforschung:</b> Um die Bedürfnisse und Erwartungen des Benutzers zu verstehen.
+    </p>
+    <p class="indented-paragraph">
+      <b>Prototyping:</b> Um frühzeitig Feedback von Benutzern einzuholen und das System iterativ zu verbessern.
+    </p>
+    <p class="indented-paragraph">
+      <b>Usability-Tests:</b> Um die Benutzerfreundlichkeit des Systems zu überprüfen und zu optimieren.
+    </p>
   </div>
   <div class="col-12">
     <p-divider/>
     <h3 style="text-align: center">Potentielle Probleme</h3>
     <p-accordion>
-      <p-accordionTab header="Header I">
+      <p-accordionTab header="Subjektive Wahrnehmung">
         <p>
-          Lorem ipsum dolor sit amet...
+          Die Wahrnehmung von Komfort ist subjektiv und kann von Benutzer zu Benutzer unterschiedlich sein.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header II">
+      <p-accordionTab header="Komplexität der Messung">
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+          Komfort ist ein komplexes Konstrukt und kann nicht einfach gemessen werden. Es gibt verschiedene
+          Methoden zur Messung von Komfort, z. B. Fragebögen, physiologische Messungen oder Beobachtungen des
+          Benutzerverhaltens.
         </p>
       </p-accordionTab>
-      <p-accordionTab header="Header III">
+      <p-accordionTab header="Abwägung mit anderen Zielen">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos...
+          Bei der Gestaltung von Automationssystemen muss Komfort oft mit anderen Zielen abgewogen werden,
+          z. B. mit Effizienz, Sicherheit oder Kosten.
         </p>
       </p-accordionTab>
     </p-accordion>
@@ -174,7 +191,34 @@
     <p-divider/>
     <p-fieldset legend="Ressourcenempfehlungen/Literatur" [toggleable]="true" collapsed="true">
       <p>
-        Lorem ipsum dolor sit amet...
+        <b>Normen:</b>
+      </p>
+      <p>
+        DIN EN ISO 9241-110:2020 Ergonomie der Mensch-System-Interaktion - Teil 110: Gestaltungsgrundsätze für die Dialoggestaltung.
+      </p>
+      <p>
+        <b>Bücher:</b>
+      </p>
+      <p>
+        Rogers, Y., Sharp, H., & Preece, J. (2011). Interaction design: Beyond human-computer interaction. John Wiley & Sons.
+      </p>
+      <p>
+        Norman, D. A. (2013). The design of everyday things: Revised and expanded edition. Basic books.
+      </p>
+      <p>
+        <b>Artikel:</b>
+      </p>
+      <p>
+        Lasota, P. A., & Shah, J. A. (2015). Analyzing the effects of human-aware motion planning on close-proximity human–robot collaboration. Human Factors, 57(1), 21-33.
+      </p>
+      <p>
+        <b>Websites:</b>
+      </p>
+      <p>
+        Interaction Design Foundation: <a href="https://www.interaction-design.org/" target="_blank">https://www.interaction-design.org/</a>
+      </p>
+      <p>
+        UX Collective: <a href="https://uxdesign.cc/" target="_blank">https://uxdesign.cc/</a>
       </p>
     </p-fieldset>
   </div>
