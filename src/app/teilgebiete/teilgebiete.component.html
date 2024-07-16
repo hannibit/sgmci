@@ -5,8 +5,8 @@
   <div class="col-12">
     <p style="text-align: center">Willkommen im Dashboard. Hier können Sie auf die Funktionalitäten dieser Anwendung zugreifen.</p>
   </div>
-  <div class="col-12">
-    <div *ngFor="let teilgebiet of teilgebiete">
+  <div class="grid">
+    <div *ngFor="let teilgebiet of teilgebiete" class="col-6">
       <p-card [header]="teilgebiet.name">
         <p style="padding-bottom: 5px">{{teilgebiet.beschreibung}}</p>
         <ng-template pTemplate="footer">

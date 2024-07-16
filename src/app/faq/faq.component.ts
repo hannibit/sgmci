@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
+import {FragenService} from "../fragen.service";
 
 @Component({
   selector: 'app-faq',
@@ -19,19 +19,26 @@ export class FaqComponent implements OnInit {
   selectedTeilgebiet9: any | undefined;
   selectedTeilgebiet10: any | undefined;
 
-  textFrage1: string | undefined;
-  textFrage2: string | undefined;
-  textFrage3: string | undefined;
-  textFrage4: string | undefined;
-  textFrage5: string | undefined;
-  textFrage6: string | undefined;
-  textFrage7: string | undefined;
-  textFrage8: string | undefined;
-  textFrage9: string | undefined;
-  textFrage10: string | undefined;
+  textFrage1: string[] | undefined;
+  textFrage2: string[] | undefined;
+  textFrage3: string[] | undefined;
+  textFrage4: string[] | undefined;
+  textFrage5: string[] | undefined;
+  textFrage6: string[] | undefined;
+  textFrage7: string[] | undefined;
+  textFrage8: string[] | undefined;
+  textFrage9: string[] | undefined;
+  textFrage10: string[] | undefined;
+
+  constructor(private fragenService: FragenService) {
+  }
 
   ngOnInit(): void {
     this.teilgebiete = [
+      {
+        name: 'Kein Teilgebiet ausgewählt',
+        key: 'none',
+      },
       {
         name: 'Vertrauen',
         key: 'vertrauen',
@@ -77,397 +84,430 @@ export class FaqComponent implements OnInit {
         key: 'verfuegbarkeit',
       },
     ]
-    this.textFrage1 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
-    this.textFrage2 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
-    this.textFrage3 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
-    this.textFrage4 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
-    this.textFrage5 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
-    this.textFrage6 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
-    this.textFrage7 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
-    this.textFrage8 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
-    this.textFrage9 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
-    this.textFrage10 = "Wählen Sie ein Teilgebiet aus, um die zugehörige Antwort zu sehen."
+
+    this.selectedTeilgebiet1 = this.teilgebiete[0]
+    this.selectedTeilgebiet2 = this.teilgebiete[0]
+    this.selectedTeilgebiet3 = this.teilgebiete[0]
+    this.selectedTeilgebiet4 = this.teilgebiete[0]
+    this.selectedTeilgebiet5 = this.teilgebiete[0]
+    this.selectedTeilgebiet6 = this.teilgebiete[0]
+    this.selectedTeilgebiet7 = this.teilgebiete[0]
+    this.selectedTeilgebiet8 = this.teilgebiete[0]
+    this.selectedTeilgebiet9 = this.teilgebiete[0]
+    this.selectedTeilgebiet10 = this.teilgebiete[0]
+
+    this.fragenService.getFrage1().subscribe(textFrage1 => {
+      console.log(textFrage1)
+      this.textFrage1 = textFrage1
+    })
+    this.fragenService.getFrage2().subscribe(textFrage2 => {
+      this.textFrage2 = textFrage2
+    })
+    this.fragenService.getFrage3().subscribe(textFrage3 => {
+      this.textFrage3 = textFrage3
+    })
+    this.fragenService.getFrage4().subscribe(textFrage4 => {
+      this.textFrage4 = textFrage4
+    })
+    this.fragenService.getFrage5().subscribe(textFrage5 => {
+      this.textFrage5 = textFrage5
+    })
+    this.fragenService.getFrage6().subscribe(textFrage6 => {
+      this.textFrage6 = textFrage6
+    })
+    this.fragenService.getFrage7().subscribe(textFrage7 => {
+      this.textFrage7 = textFrage7
+    })
+    this.fragenService.getFrage8().subscribe(textFrage8 => {
+      this.textFrage8 = textFrage8
+    })
+    this.fragenService.getFrage9().subscribe(textFrage9 => {
+      this.textFrage9 = textFrage9
+    })
+    this.fragenService.getFrage10().subscribe(textFrage10 => {
+      this.textFrage10 = textFrage10
+    })
   }
 
   changeText1() {
-    switch (this.selectedTeilgebiet1) {
+    switch (this.selectedTeilgebiet1.key) {
       case 'vertrauen':
-        this.textFrage1 = "Vertrauen"
+        this.fragenService.addFrage1("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage1 = "Kontrollgefühl"
+        this.fragenService.addFrage1("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage1 = "Sicherheit"
+        this.fragenService.addFrage1("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage1 = "Korrektheit"
+        this.fragenService.addFrage1("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage1 = "Transparenz"
+        this.fragenService.addFrage1("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage1 = "Vorhersehbarkeit"
+        this.fragenService.addFrage1("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage1 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage1("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage1 = "Zeit/Effizienz"
+        this.fragenService.addFrage1("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage1 = "Support/Updates"
+        this.fragenService.addFrage1("Support/Updates")
         break
       case 'komfort':
-        this.textFrage1 = "Komfort"
+        this.fragenService.addFrage1("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage1 = "Verfügbarkeit"
+        this.fragenService.addFrage1("Verfügbarkeit")
         break
     }
+    console.log(this.textFrage1)
   }
 
   changeText2() {
-    switch (this.selectedTeilgebiet2) {
+    switch (this.selectedTeilgebiet2.key) {
       case 'vertrauen':
-        this.textFrage2 = "Vertrauen"
+        this.fragenService.addFrage2("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage2 = "Kontrollgefühl"
+        this.fragenService.addFrage2("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage2 = "Sicherheit"
+        this.fragenService.addFrage2("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage2 = "Korrektheit"
+        this.fragenService.addFrage2("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage2 = "Transparenz"
+        this.fragenService.addFrage2("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage2 = "Vorhersehbarkeit"
+        this.fragenService.addFrage2("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage2 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage2("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage2 = "Zeit/Effizienz"
+        this.fragenService.addFrage2("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage2 = "Support/Updates"
+        this.fragenService.addFrage2("Support/Updates")
         break
       case 'komfort':
-        this.textFrage2 = "Komfort"
+        this.fragenService.addFrage2("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage2 = "Verfügbarkeit"
+        this.fragenService.addFrage2("Verfügbarkeit")
         break
     }
   }
 
   changeText3() {
-    switch (this.selectedTeilgebiet3) {
+    switch (this.selectedTeilgebiet3.key) {
       case 'vertrauen':
-        this.textFrage3 = "Vertrauen"
+        this.fragenService.addFrage3("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage3 = "Kontrollgefühl"
+        this.fragenService.addFrage3("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage3 = "Sicherheit"
+        this.fragenService.addFrage3("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage3 = "Korrektheit"
+        this.fragenService.addFrage3("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage3 = "Transparenz"
+        this.fragenService.addFrage3("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage3 = "Vorhersehbarkeit"
+        this.fragenService.addFrage3("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage3 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage3("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage3 = "Zeit/Effizienz"
+        this.fragenService.addFrage3("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage3 = "Support/Updates"
+        this.fragenService.addFrage3("Support/Updates")
         break
       case 'komfort':
-        this.textFrage3 = "Komfort"
+        this.fragenService.addFrage3("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage3 = "Verfügbarkeit"
+        this.fragenService.addFrage3("Verfügbarkeit")
         break
     }
   }
 
   changeText4() {
-    switch (this.selectedTeilgebiet4) {
+    switch (this.selectedTeilgebiet4.key) {
       case 'vertrauen':
-        this.textFrage4 = "Vertrauen"
+        this.fragenService.addFrage4("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage4 = "Kontrollgefühl"
+        this.fragenService.addFrage4("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage4 = "Sicherheit"
+        this.fragenService.addFrage4("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage4 = "Korrektheit"
+        this.fragenService.addFrage4("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage4 = "Transparenz"
+        this.fragenService.addFrage4("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage4 = "Vorhersehbarkeit"
+        this.fragenService.addFrage4("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage4 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage4("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage4 = "Zeit/Effizienz"
+        this.fragenService.addFrage4("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage4 = "Support/Updates"
+        this.fragenService.addFrage4("Support/Updates")
         break
       case 'komfort':
-        this.textFrage4 = "Komfort"
+        this.fragenService.addFrage4("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage4 = "Verfügbarkeit"
+        this.fragenService.addFrage4("Verfügbarkeit")
         break
     }
   }
 
   changeText5() {
-    switch (this.selectedTeilgebiet5) {
+    switch (this.selectedTeilgebiet5.key) {
       case 'vertrauen':
-        this.textFrage5 = "Vertrauen"
+        this.fragenService.addFrage5("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage5 = "Kontrollgefühl"
+        this.fragenService.addFrage5("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage5 = "Sicherheit"
+        this.fragenService.addFrage5("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage5 = "Korrektheit"
+        this.fragenService.addFrage5("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage5 = "Transparenz"
+        this.fragenService.addFrage5("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage5 = "Vorhersehbarkeit"
+        this.fragenService.addFrage5("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage5 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage5("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage5 = "Zeit/Effizienz"
+        this.fragenService.addFrage5("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage5 = "Support/Updates"
+        this.fragenService.addFrage5("Support/Updates")
         break
       case 'komfort':
-        this.textFrage5 = "Komfort"
+        this.fragenService.addFrage5("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage5 = "Verfügbarkeit"
+        this.fragenService.addFrage5("Verfügbarkeit")
         break
     }
   }
 
   changeText6() {
-    switch (this.selectedTeilgebiet6) {
+    switch (this.selectedTeilgebiet6.key) {
       case 'vertrauen':
-        this.textFrage6 = "Vertrauen"
+        this.fragenService.addFrage6("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage6 = "Kontrollgefühl"
+        this.fragenService.addFrage6("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage6 = "Sicherheit"
+        this.fragenService.addFrage6("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage6 = "Korrektheit"
+        this.fragenService.addFrage6("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage6 = "Transparenz"
+        this.fragenService.addFrage6("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage6 = "Vorhersehbarkeit"
+        this.fragenService.addFrage6("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage6 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage6("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage6 = "Zeit/Effizienz"
+        this.fragenService.addFrage6("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage6 = "Support/Updates"
+        this.fragenService.addFrage6("Support/Updates")
         break
       case 'komfort':
-        this.textFrage6 = "Komfort"
+        this.fragenService.addFrage6("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage6 = "Verfügbarkeit"
+        this.fragenService.addFrage6("Verfügbarkeit")
         break
     }
   }
 
   changeText7() {
-    switch (this.selectedTeilgebiet7) {
+    switch (this.selectedTeilgebiet7.key) {
       case 'vertrauen':
-        this.textFrage7 = "Vertrauen"
+        this.fragenService.addFrage7("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage7 = "Kontrollgefühl"
+        this.fragenService.addFrage7("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage7 = "Sicherheit"
+        this.fragenService.addFrage7("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage7 = "Korrektheit"
+        this.fragenService.addFrage7("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage7 = "Transparenz"
+        this.fragenService.addFrage7("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage7 = "Vorhersehbarkeit"
+        this.fragenService.addFrage7("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage7 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage7("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage7 = "Zeit/Effizienz"
+        this.fragenService.addFrage7("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage7 = "Support/Updates"
+        this.fragenService.addFrage7("Support/Updates")
         break
       case 'komfort':
-        this.textFrage7 = "Komfort"
+        this.fragenService.addFrage7("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage7 = "Verfügbarkeit"
+        this.fragenService.addFrage7("Verfügbarkeit")
         break
     }
   }
 
   changeText8() {
-    switch (this.selectedTeilgebiet8) {
+    switch (this.selectedTeilgebiet8.key) {
       case 'vertrauen':
-        this.textFrage8 = "Vertrauen"
+        this.fragenService.addFrage8("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage8 = "Kontrollgefühl"
+        this.fragenService.addFrage8("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage8 = "Sicherheit"
+        this.fragenService.addFrage8("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage8 = "Korrektheit"
+        this.fragenService.addFrage8("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage8 = "Transparenz"
+        this.fragenService.addFrage8("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage8 = "Vorhersehbarkeit"
+        this.fragenService.addFrage8("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage8 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage8("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage8 = "Zeit/Effizienz"
+        this.fragenService.addFrage8("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage8 = "Support/Updates"
+        this.fragenService.addFrage8("Support/Updates")
         break
       case 'komfort':
-        this.textFrage8 = "Komfort"
+        this.fragenService.addFrage8("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage8 = "Verfügbarkeit"
+        this.fragenService.addFrage8("Verfügbarkeit")
         break
     }
   }
 
   changeText9() {
-    switch (this.selectedTeilgebiet9) {
+    switch (this.selectedTeilgebiet9.key) {
       case 'vertrauen':
-        this.textFrage9 = "Vertrauen"
+        this.fragenService.addFrage9("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage9 = "Kontrollgefühl"
+        this.fragenService.addFrage9("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage9 = "Sicherheit"
+        this.fragenService.addFrage9("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage9 = "Korrektheit"
+        this.fragenService.addFrage9("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage9 = "Transparenz"
+        this.fragenService.addFrage9("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage9 = "Vorhersehbarkeit"
+        this.fragenService.addFrage9("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage9 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage9("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage9 = "Zeit/Effizienz"
+        this.fragenService.addFrage9("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage9 = "Support/Updates"
+        this.fragenService.addFrage9("Support/Updates")
         break
       case 'komfort':
-        this.textFrage9 = "Komfort"
+        this.fragenService.addFrage9("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage9 = "Verfügbarkeit"
+        this.fragenService.addFrage9("Verfügbarkeit")
         break
     }
   }
 
   changeText10() {
-    switch (this.selectedTeilgebiet10) {
+    switch (this.selectedTeilgebiet10.key) {
       case 'vertrauen':
-        this.textFrage10 = "Vertrauen"
+        this.fragenService.addFrage10("Vertrauen")
         break
       case 'kontrollgefuehl':
-        this.textFrage10 = "Kontrollgefühl"
+        this.fragenService.addFrage10("Kontrollgefühl")
         break
       case 'sicherheit':
-        this.textFrage10 = "Sicherheit"
+        this.fragenService.addFrage10("Sicherheit")
         break
       case 'korrektheit':
-        this.textFrage10 = "Korrektheit"
+        this.fragenService.addFrage10("Korrektheit")
         break
       case 'transparenz':
-        this.textFrage10 = "Transparenz"
+        this.fragenService.addFrage10("Transparenz")
         break
       case 'vorhersehbarkeit':
-        this.textFrage10 = "Vorhersehbarkeit"
+        this.fragenService.addFrage10("Vorhersehbarkeit")
         break
       case 'erfahrung':
-        this.textFrage10 = "Erfahrung und Bekanntheit"
+        this.fragenService.addFrage10("Erfahrung und Bekanntheit")
         break
       case 'zeit':
-        this.textFrage10 = "Zeit/Effizienz"
+        this.fragenService.addFrage10("Zeit/Effizienz")
         break
       case 'support':
-        this.textFrage10 = "Support/Updates"
+        this.fragenService.addFrage10("Support/Updates")
         break
       case 'komfort':
-        this.textFrage10 = "Komfort"
+        this.fragenService.addFrage10("Komfort")
         break
       case 'verfuegbarkeit':
-        this.textFrage10 = "Verfügbarkeit"
+        this.fragenService.addFrage10("Verfügbarkeit")
         break
     }
   }
-
 
 }
