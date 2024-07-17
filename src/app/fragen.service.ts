@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, delay, map, Observable} from "rxjs";
+import {BehaviorSubject, map, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +45,6 @@ export class FragenService {
 
   getFrage2(): Observable<string[]> {
     return this.frage2Subject.asObservable().pipe(
-      delay(1000),
       map((text: string[]) => {
         return text.map((text2: string) => {
           return text2;
@@ -60,7 +59,6 @@ export class FragenService {
 
   getFrage3(): Observable<string[]> {
     return this.frage3Subject.asObservable().pipe(
-      delay(1000),
       map((text: string[]) => {
         return text.map((text2: string) => {
           return text2;
@@ -75,7 +73,6 @@ export class FragenService {
 
   getFrage4(): Observable<string[]> {
     return this.frage4Subject.asObservable().pipe(
-      delay(1000),
       map((text: string[]) => {
         return text.map((text2: string) => {
           return text2;
@@ -90,7 +87,6 @@ export class FragenService {
 
   getFrage5(): Observable<string[]> {
     return this.frage5Subject.asObservable().pipe(
-      delay(1000),
       map((text: string[]) => {
         return text.map((text2: string) => {
           return text2;
@@ -105,7 +101,6 @@ export class FragenService {
 
   getFrage6(): Observable<string[]> {
     return this.frage6Subject.asObservable().pipe(
-      delay(1000),
       map((text: string[]) => {
         return text.map((text2: string) => {
           return text2;
@@ -120,7 +115,6 @@ export class FragenService {
 
   getFrage7(): Observable<string[]> {
     return this.frage7Subject.asObservable().pipe(
-      delay(1000),
       map((text: string[]) => {
         return text.map((text2: string) => {
           return text2;
@@ -135,7 +129,6 @@ export class FragenService {
 
   getFrage8(): Observable<string[]> {
     return this.frage8Subject.asObservable().pipe(
-      delay(1000),
       map((text: string[]) => {
         return text.map((text2: string) => {
           return text2;
@@ -150,7 +143,6 @@ export class FragenService {
 
   getFrage9(): Observable<string[]> {
     return this.frage9Subject.asObservable().pipe(
-      delay(1000),
       map((text: string[]) => {
         return text.map((text2: string) => {
           return text2;
@@ -165,7 +157,6 @@ export class FragenService {
 
   getFrage10(): Observable<string[]> {
     return this.frage10Subject.asObservable().pipe(
-      delay(1000),
       map((text: string[]) => {
         return text.map((text2: string) => {
           return text2;

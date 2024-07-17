@@ -6,258 +6,353 @@
     <p style="text-align: center">Hier werden mögliche Fragen für jedes Teilgebiet beantwortet.</p>
   </div>
   <div class="col-12">
-    <p-panel header="Was bedeutet Human-Automation-Interaktion?" [toggleable]="true" collapsed="true">
-      <p>
-        Human-Automation-Interaktion (HAI) beschreibt die Schnittstelle und das Zusammenspiel zwischen Menschen und
-        automatisierten Systemen. Dies umfasst alle Arten von Interaktionen, bei denen Menschen mit automatisierten
-        Prozessen, Maschinen oder Software arbeiten. Die Hauptaspekte der HAI umfassen:
-      </p>
-      <ul>
-        <li>
-          <b>Bedienbarkeit:</b> Wie intuitiv und einfach können Menschen mit dem automatisierten System interagieren?
-          Dies betrifft die Benutzeroberfläche und die Benutzerfreundlichkeit des Systems.
-        </li>
-        <li>
-          <b>Kontrolle und Überwachung:</b> Inwieweit haben Menschen die Kontrolle über die automatisierten Prozesse?
-          Wie überwachen sie den Zustand und die Leistung der Automation?
-        </li>
-        <li>
-          <b>Vertrauen und Akzeptanz:</b> Vertrauen die Benutzer dem automatisierten System, und wie akzeptieren sie
-          dessen Entscheidungen und Aktionen?
-        </li>
-        <li>
-          <b>Kommunikation:</b> Wie kommunizieren Mensch und Maschine miteinander? Dies kann durch visuelle Anzeigen,
-          akustische Signale oder direkte Eingaben geschehen.
-        </li>
-        <li>
-          <b>Fehlermanagement:</b> Wie reagieren die Systeme auf Fehler und wie unterstützen sie den Menschen bei der
-          Fehlerbehebung?
-        </li>
-        <li>
-          <b>Anpassungsfähigkeit:</b> Wie gut können sich automatisierte Systeme an Veränderungen in ihrer Umgebung oder
-          in den Anforderungen anpassen?
-        </li>
-      </ul>
-      <p>
-        Beispiele für Human-Automation-Interaktion finden sich in vielen Bereichen wie der Industrie (Robotersteuerung),
-        im Transportwesen (autonome Fahrzeuge), in der Medizin (automatisierte Diagnose- und Behandlungssysteme) und im
-        täglichen Leben (intelligente Haushaltsgeräte).
-      </p>
-      <p>
-        Das Ziel der Human-Automation-Interaktion ist es, eine reibungslose, effiziente und sichere Zusammenarbeit
-        zwischen Menschen und automatisierten Systemen zu gewährleisten, wobei die Stärken beider Partner optimal
-        genutzt werden.
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel header="Warum Transparenz?" [toggleable]="true" collapsed="true">
-      <p>
-        In der heutigen Zeit werden Automationssysteme immer komplexer und übernehmen zunehmend Aufgaben in unserem
-        Alltag. Für den Benutzer ist es dabei oft schwer nachzuvollziehen, wie diese Systeme Entscheidungen treffen und
-        welche Informationen sie dafür verwenden. Mangelnde Transparenz kann zu Misstrauen, Unsicherheit und Fehlnutzung
-        des Systems führen, insbesondere wenn es sich um sicherheitskritische Anwendungen handelt.
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Was bedeutet </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet1"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText1()"
-          />
-          <h4 style="padding-left: 5px"> in Human-Automation-Interaktion?</h4>
+    <p-fieldset legend="Allgemeine Fragen" toggleable="true">
+      <div class="grid">
+        <div class="col-12">
+          <p-panel header="Was bedeutet Human-Automation-Interaktion?" [toggleable]="true" collapsed="true">
+            <p>
+              Human-Automation-Interaktion (HAI) beschreibt die Schnittstelle und das Zusammenspiel zwischen Menschen
+              und
+              automatisierten Systemen. Dies umfasst alle Arten von Interaktionen, bei denen Menschen mit
+              automatisierten
+              Prozessen, Maschinen oder Software arbeiten. Die Hauptaspekte der HAI umfassen:
+            </p>
+            <ul>
+              <li>
+                <b>Bedienbarkeit:</b> Wie intuitiv und einfach können Menschen mit dem automatisierten System
+                interagieren?
+                Dies betrifft die Benutzeroberfläche und die Benutzerfreundlichkeit des Systems.
+              </li>
+              <li>
+                <b>Kontrolle und Überwachung:</b> Inwieweit haben Menschen die Kontrolle über die automatisierten
+                Prozesse?
+                Wie überwachen sie den Zustand und die Leistung der Automation?
+              </li>
+              <li>
+                <b>Vertrauen und Akzeptanz:</b> Vertrauen die Benutzer dem automatisierten System, und wie akzeptieren
+                sie
+                dessen Entscheidungen und Aktionen?
+              </li>
+              <li>
+                <b>Kommunikation:</b> Wie kommunizieren Mensch und Maschine miteinander? Dies kann durch visuelle
+                Anzeigen,
+                akustische Signale oder direkte Eingaben geschehen.
+              </li>
+              <li>
+                <b>Fehlermanagement:</b> Wie reagieren die Systeme auf Fehler und wie unterstützen sie den Menschen bei
+                der
+                Fehlerbehebung?
+              </li>
+              <li>
+                <b>Anpassungsfähigkeit:</b> Wie gut können sich automatisierte Systeme an Veränderungen in ihrer
+                Umgebung oder
+                in den Anforderungen anpassen?
+              </li>
+            </ul>
+            <p>
+              Beispiele für Human-Automation-Interaktion finden sich in vielen Bereichen wie der Industrie
+              (Robotersteuerung),
+              im Transportwesen (autonome Fahrzeuge), in der Medizin (automatisierte Diagnose- und Behandlungssysteme)
+              und im
+              täglichen Leben (intelligente Haushaltsgeräte).
+            </p>
+            <p>
+              Das Ziel der Human-Automation-Interaktion ist es, eine reibungslose, effiziente und sichere Zusammenarbeit
+              zwischen Menschen und automatisierten Systemen zu gewährleisten, wobei die Stärken beider Partner optimal
+              genutzt werden.
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage1 }}
-      </p>
-    </p-panel>
+        <div class="col-12">
+          <p-panel header="Warum Vertrauen?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Kontrollgefühl?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Sicherheit?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Korrektheit?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Transparenz?" [toggleable]="true" collapsed="true">
+            <p>
+              In der heutigen Zeit werden Automationssysteme immer komplexer und übernehmen zunehmend Aufgaben in
+              unserem
+              Alltag. Für den Benutzer ist es dabei oft schwer nachzuvollziehen, wie diese Systeme Entscheidungen
+              treffen und
+              welche Informationen sie dafür verwenden. Mangelnde Transparenz kann zu Misstrauen, Unsicherheit und
+              Fehlnutzung
+              des Systems führen, insbesondere wenn es sich um sicherheitskritische Anwendungen handelt.
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Vorhehsehbarkeit?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Erfahrung und Bekanntkeit?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Zeit/Effizienz?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Support/Updates?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Komfort?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+        <div class="col-12">
+          <p-panel header="Warum Verfügbarkeit?" [toggleable]="true" collapsed="true">
+            <p>
+              ...
+            </p>
+          </p-panel>
+        </div>
+      </div>
+    </p-fieldset>
   </div>
   <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Warum ist </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet2"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText2()"
-          />
-          <h4 style="padding-left: 5px"> in der Human-Automation-Interaktion wichtig?</h4>
+    <p-fieldset legend="Fokussierte Fragen" toggleable="true">
+      <div class="grid">
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Was bedeutet </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet1"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText1()"
+                />
+                <h4 style="padding-left: 5px"> in Human-Automation-Interaktion?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage1[textFrage1.length - 1] }}
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage2 }}
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Welche Vorteile bietet </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet3"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText3()"
-          />
-          <h4 style="padding-left: 5px"> ?</h4>
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Warum ist </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet2"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText2()"
+                />
+                <h4 style="padding-left: 5px"> in der Human-Automation-Interaktion wichtig?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage2[textFrage2.length - 1] }}
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage3 }}
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Welche Herausforderungen gibt es bei der Umsetzung von </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet4"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText4()"
-          />
-          <h4 style="padding-left: 5px"> ?</h4>
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Welche Vorteile bietet </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet3"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText3()"
+                />
+                <h4 style="padding-left: 5px"> ?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage3[textFrage3.length - 1] }}
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage4 }}
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Welche User sind primär durch </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet5"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText5()"
-          />
-          <h4 style="padding-left: 5px"> in betroffen?</h4>
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Welche Herausforderungen gibt es bei der Umsetzung von </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet4"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText4()"
+                />
+                <h4 style="padding-left: 5px"> ?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage4[textFrage4.length - 1] }}
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage5 }}
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Was sind die wichtigsten Punkte von </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet6"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText6()"
-          />
-          <h4 style="padding-left: 5px"> ?</h4>
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Welche User sind primär durch </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet5"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText5()"
+                />
+                <h4 style="padding-left: 5px"> in betroffen?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage5[textFrage5.length - 1] }}
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage6 }}
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Wie kann ich </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet7"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText7()"
-          />
-          <h4 style="padding-left: 5px"> in meinem System verbessern?</h4>
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Was sind die wichtigsten Punkte von </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet6"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText6()"
+                />
+                <h4 style="padding-left: 5px"> ?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage6[textFrage6.length - 1] }}
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage7 }}
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Welche Nachteile können entstehen, wenn ich mich nur auf </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet8"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText8()"
-          />
-          <h4 style="padding-left: 5px"> fokussiere?</h4>
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Wie kann ich </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet7"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText7()"
+                />
+                <h4 style="padding-left: 5px"> in meinem System verbessern?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage7[textFrage7.length - 1] }}
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage8 }}
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Mit welcher bereits verfügbaren Software kann ich </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet9"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText9()"
-          />
-          <h4 style="padding-left: 5px"> verbessern?</h4>
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Welche Nachteile können entstehen, wenn ich mich nur auf </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet8"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText8()"
+                />
+                <h4 style="padding-left: 5px"> fokussiere?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage8[textFrage8.length - 1] }}
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage9 }}
-      </p>
-    </p-panel>
-  </div>
-  <div class="col-12">
-    <p-panel [toggleable]="true" collapsed="true">
-      <p-header>
-        <div style="display: flex">
-          <h4 style="padding-right: 5px">Warum hat mein System Probleme mit </h4>
-          <p-dropdown
-            [options]="teilgebiete"
-            [(ngModel)]="selectedTeilgebiet10"
-            optionLabel="name"
-            placeholder="Teilgebiet auswählen"
-            (onChange)="changeText10()"
-          />
-          <h4 style="padding-left: 5px"> ?</h4>
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Mit welcher bereits verfügbaren Software kann ich </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet9"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText9()"
+                />
+                <h4 style="padding-left: 5px"> verbessern?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage9[textFrage9.length - 1] }}
+            </p>
+          </p-panel>
         </div>
-      </p-header>
-      <p>
-        {{ textFrage10 }}
-      </p>
-    </p-panel>
+        <div class="col-12">
+          <p-panel [toggleable]="true" collapsed="true">
+            <p-header>
+              <div style="display: flex">
+                <h4 style="padding-right: 5px">Warum hat mein System Probleme mit </h4>
+                <p-dropdown
+                  [options]="teilgebiete"
+                  [(ngModel)]="selectedTeilgebiet10"
+                  optionLabel="name"
+                  placeholder="Teilgebiet auswählen"
+                  (onChange)="changeText10()"
+                />
+                <h4 style="padding-left: 5px"> ?</h4>
+              </div>
+            </p-header>
+            <p>
+              {{ textFrage10[textFrage10.length - 1] }}
+            </p>
+          </p-panel>
+        </div>
+      </div>
+    </p-fieldset>
   </div>
 </div>

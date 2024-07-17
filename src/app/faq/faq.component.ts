@@ -19,16 +19,16 @@ export class FaqComponent implements OnInit {
   selectedTeilgebiet9: any | undefined;
   selectedTeilgebiet10: any | undefined;
 
-  textFrage1: string[] | undefined;
-  textFrage2: string[] | undefined;
-  textFrage3: string[] | undefined;
-  textFrage4: string[] | undefined;
-  textFrage5: string[] | undefined;
-  textFrage6: string[] | undefined;
-  textFrage7: string[] | undefined;
-  textFrage8: string[] | undefined;
-  textFrage9: string[] | undefined;
-  textFrage10: string[] | undefined;
+  textFrage1: string[] = []
+  textFrage2: string[] = []
+  textFrage3: string[] = []
+  textFrage4: string[] = []
+  textFrage5: string[] = []
+  textFrage6: string[] = []
+  textFrage7: string[] = []
+  textFrage8: string[] = []
+  textFrage9: string[] = []
+  textFrage10: string[] = []
 
   constructor(private fragenService: FragenService) {
   }
@@ -97,7 +97,6 @@ export class FaqComponent implements OnInit {
     this.selectedTeilgebiet10 = this.teilgebiete[0]
 
     this.fragenService.getFrage1().subscribe(textFrage1 => {
-      console.log(textFrage1)
       this.textFrage1 = textFrage1
     })
     this.fragenService.getFrage2().subscribe(textFrage2 => {
