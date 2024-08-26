@@ -28,11 +28,11 @@ export class MenuComponent implements OnInit{
         icon: 'pi pi-th-large',
         route: '/teilgebiete',
         items: [
-          {
-            label: 'Vertrauen',
-            icon: 'pi pi-th-large',
-            route: '/vertrauen'
-          },
+          // {
+          //   label: 'Vertrauen',
+          //   icon: 'pi pi-th-large',
+          //   route: '/vertrauen'
+          // },
           {
             label: 'Kontrollgefühl',
             icon: 'pi pi-th-large',

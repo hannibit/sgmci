@@ -14,10 +14,10 @@ export class TeilgebieteComponent implements OnInit{
 
   ngOnInit(): void {
     this.teilgebiete = [
-      {
-        name: 'Vertrauen',
-        beschreibung: 'Bereitschaft, sich auf eine Person oder eine Sache zu verlassen',
-      },
+      // {
+      //   name: 'Vertrauen',
+      //   beschreibung: 'Bereitschaft, sich auf eine Person oder eine Sache zu verlassen',
+      // },
       {
         name: 'Kontrollgefühl',
         beschreibung: 'Gefühl, die Kontrolle über eine Situation zu haben',
@@ -63,11 +63,11 @@ export class TeilgebieteComponent implements OnInit{
 
   navigate(url: string) {
     switch (url) {
-      case 'Vertrauen':
-        this.router.navigate(['/vertrauen']);
-        return
-      case 'Kontrolgefühl':
-        this.router.navigate(['/kontrolgefuehl']);
+      // case 'Vertrauen':
+      //   this.router.navigate(['/vertrauen']);
+      //   return
+      case 'Kontrollgefühl':
+        this.router.navigate(['/kontrollgefuehl']);
         return
       case 'Sicherheit':
         this.router.navigate(['/sicherheit']);
