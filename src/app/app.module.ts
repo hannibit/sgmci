@@ -33,6 +33,7 @@ import {DropdownModule} from "primeng/dropdown";
 import {TabViewModule} from "primeng/tabview";
 import {AccordionModule} from "primeng/accordion";
 import {StepperModule} from "primeng/stepper";
+import {ScrollPanelModule} from "primeng/scrollpanel";
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import {StepperModule} from "primeng/stepper";
         DropdownModule,
         TabViewModule,
         AccordionModule,
-        StepperModule
+        StepperModule,
+        ScrollPanelModule
     ],
   providers: [],
   bootstrap: [AppComponent]
