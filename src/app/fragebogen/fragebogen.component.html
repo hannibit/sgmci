@@ -14,8 +14,8 @@
     <p-fieldset legend="Fokus des Projekts">
       <div class="grid">
         <div class="col-12">
-          <label>Wie sehr haben sie sich auf Systeme fokussiert, die für Transparenz für den User sorgen?</label>
-          <div *ngFor="let category of categoriesFokus">
+          <label [pTooltip]="tooltip1">Wie sehr haben sie sich auf Systeme fokussiert, die für Transparenz für den User sorgen?</label>
+          <div *ngFor="let category of categoriesFokus" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -27,8 +27,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Wie groß war ihr Fokus auf die Vorhersehbarkeit des Systems?</label>
-          <div *ngFor="let category of categoriesFokus">
+          <label [pTooltip]="tooltip2">Wie groß war ihr Fokus auf die Vorhersehbarkeit des Systems?</label>
+          <div *ngFor="let category of categoriesFokus" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -40,8 +40,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Wie viel Fokus ist auf die (Cyber-) Sicherheit des Systems geflossen?</label>
-          <div *ngFor="let category of categoriesFokus">
+          <label [pTooltip]="tooltip3">Wie viel Fokus ist auf die (Cyber-) Sicherheit des Systems geflossen?</label>
+          <div *ngFor="let category of categoriesFokus" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -53,8 +53,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Wie viel Fokus haben sie auf die Perspektive des Users gelegt?</label>
-          <div *ngFor="let category of categoriesFokus">
+          <label [pTooltip]="tooltip4">Wie viel Fokus haben sie auf die Perspektive des Users gelegt?</label>
+          <div *ngFor="let category of categoriesFokus" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -66,9 +66,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Was war das Ausmaß an Fokus das sie auf die Korrektheit der Ergebnisse des Systems gelegt
-            haben?</label>
-          <div *ngFor="let category of categoriesFokus">
+          <label [pTooltip]="tooltip5">Was war das Ausmaß an Fokus das sie auf die Korrektheit der Ergebnisse des Systems gelegt haben?</label>
+          <div *ngFor="let category of categoriesFokus" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -85,8 +84,8 @@
     <p-fieldset legend="Userinteraktion des Projekts">
       <div class="grid">
         <div class="col-12">
-          <label>Ist es dem User möglich nachzuvollziehen, warum das System eine Entscheidung getroffen hat?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip6">Ist es dem User möglich nachzuvollziehen, warum das System eine Entscheidung getroffen hat?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -98,8 +97,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Kann der User sich sicher sein, dass seine Daten geschützt sind?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip7">Kann der User sich sicher sein, dass seine Daten geschützt sind?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -111,8 +110,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Ist es dem User möglich das System immer zu unterbrechen?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip8">Ist es dem User möglich das System immer zu unterbrechen?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -124,8 +123,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Ist es dem User möglich mit weniger als 5 Aktionen eine wichtige Aktion des Systems anzustoßen?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip9">Ist es dem User möglich mit weniger als 5 Aktionen eine wichtige Aktion des Systems anzustoßen?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -137,8 +136,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Kann der User mit regelmäßigen Updates rechnen?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip10">Kann der User mit regelmäßigen Updates rechnen?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -150,8 +149,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Sind die Aktionen des Users sofort spürbar für ihn?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip11">Sind die Aktionen des Users sofort spürbar für ihn?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -163,8 +162,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Würden die meisten User ihr System bereits kennen?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip12">Würden die meisten User ihr System bereits kennen?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -176,8 +175,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Kann der User sich sicher sein, dass die Ergebnisse des Systems korrekt sind?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip13">Kann der User sich sicher sein, dass die Ergebnisse des Systems korrekt sind?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -189,8 +188,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Kann der User zu jeder Zeit auf das System zugreifen?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip14">Kann der User zu jeder Zeit auf das System zugreifen?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"
@@ -202,8 +201,8 @@
           <p-divider/>
         </div>
         <div class="col-12">
-          <label>Kann der User vorhersehen, was das Ergebnis des Systems sein wird?</label>
-          <div *ngFor="let category of categoriesInteraction">
+          <label [pTooltip]="tooltip15">Kann der User vorhersehen, was das Ergebnis des Systems sein wird?</label>
+          <div *ngFor="let category of categoriesInteraction" style="margin-top: 5px">
             <p-radioButton
               [inputId]="category.key"
               name="category"

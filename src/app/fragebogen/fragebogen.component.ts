@@ -9,6 +9,22 @@ import {Router} from "@angular/router";
 export class FragebogenComponent implements OnInit{
   visible: boolean = false;
 
+  tooltip1: string = 'Transparenz ist ein entscheidender Faktor für das Vertrauen der Benutzer in ein automatisiertes System. Wenn der Projektfokus stark auf Transparenz liegt, kann dies bedeuten, dass das System so gestaltet ist, dass Benutzer verstehen, wie es funktioniert, was wiederum Vertrauen schafft.'
+  tooltip2: string = 'Vorhersehbarkeit ermöglicht es den Benutzern, die Ergebnisse und Reaktionen des Systems zu antizipieren, was die Kontrolle über das System erhöht und das Vertrauen stärkt. Wenn dieses Element im Fokus des Projekts steht, könnte es ein Schlüsselaspekt für das Vertrauen sein.'
+  tooltip3: string = 'Sicherheit ist für das Vertrauen in automatisierte Systeme essenziell, besonders wenn persönliche oder sensitive Daten verarbeitet werden. Ein hoher Fokus auf Sicherheit zeigt, dass das System Schutz vor unbefugtem Zugriff und Datenverlust bietet, was das Vertrauen erhöht.'
+  tooltip4: string = 'Die User-Perspektive ist wichtig, um sicherzustellen, dass das System den Bedürfnissen und Erwartungen der Benutzer gerecht wird. Wenn der Fokus stark auf der Benutzerperspektive lag, könnte dies darauf hindeuten, dass das System benutzerfreundlich und vertrauenswürdig ist.'
+  tooltip5: string = 'Die Korrektheit der Systemergebnisse ist zentral für das Vertrauen in die Zuverlässigkeit des Systems. Ein hoher Fokus auf korrekte Ergebnisse deutet darauf hin, dass das System zuverlässig ist, was das Vertrauen der Benutzer fördert.'
+  tooltip6: string = 'Wenn Benutzer nachvollziehen können, wie und warum das System zu bestimmten Entscheidungen gelangt, erhöht dies das Vertrauen, da es Transparenz und Erklärbarkeit bietet.'
+  tooltip7: string = 'Datenschutz ist ein wesentlicher Faktor für das Vertrauen, insbesondere in Zeiten zunehmender Cyber-Bedrohungen. Wenn Benutzer sicher sein können, dass ihre Daten geschützt sind, steigt ihr Vertrauen in das System.'
+  tooltip8: string = 'Die Möglichkeit, ein automatisiertes System zu unterbrechen, gibt den Benutzern ein Gefühl der Kontrolle, was wiederum das Vertrauen in das System stärkt.'
+  tooltip9: string = 'Benutzerfreundlichkeit und Effizienz der Interaktion sind wichtige Faktoren für das Vertrauen. Wenn Benutzer wichtige Aktionen mit minimalem Aufwand durchführen können, steigt das Vertrauen in die Effizienz und Nutzbarkeit des Systems.'
+  tooltip10: string = 'Regelmäßige Updates signalisieren, dass das System kontinuierlich gewartet und verbessert wird, was das Vertrauen in seine Langlebigkeit und Aktualität erhöht.'
+  tooltip11: string = 'Wenn Benutzer unmittelbare Rückmeldungen auf ihre Aktionen erhalten, stärkt dies das Vertrauen, da es zeigt, dass das System reaktionsschnell und verlässlich ist.'
+  tooltip12: string = 'Vertrautheit mit dem System reduziert Unsicherheit und fördert Vertrauen, da Benutzer bereits positive Erfahrungen gesammelt haben könnten.'
+  tooltip13: string = 'Wenn Benutzer sicher sein können, dass die Ergebnisse des Systems korrekt sind, stärkt dies das Vertrauen in die Zuverlässigkeit und Genauigkeit des Systems.'
+  tooltip14: string = 'Verfügbarkeit ist entscheidend für das Vertrauen, da Benutzer sich darauf verlassen können müssen, dass das System jederzeit zugänglich ist, wenn sie es benötigen.'
+  tooltip15: string = 'Vorhersehbarkeit reduziert Unsicherheit und gibt Benutzern ein Gefühl der Kontrolle, was das Vertrauen in die Handlungen des Systems verstärkt.'
+
   categoriesFokus: any[] | undefined;
   categoriesInteraction: any[] | undefined;
   selectedCategory1: any;
