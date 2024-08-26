@@ -246,7 +246,7 @@ export class FaqComponent implements OnInit {
   changeText4() {
     switch (this.selectedTeilgebiet4.key) {
       case 'vertrauen':
-        this.fragenService.addFrage4("Die richtige Balance an Vertrauen zu finden, es über die Zeit aufzubauen und zu erhalten sowie Transparenz und Nachvollziehbarkeit der Systementscheidungen sicherzustellen, sind die größten Herausforderungen.")
+        this.fragenService.addFrage4("Die richtige Balance an Vertrauen zu finden, es über die Zeit aufzubauen und zu erhalten sowie Transparenz und Nachvollziehbarkeit der Softwaresystementscheidungen sicherzustellen, sind die größten Herausforderungen.")
         break
       case 'kontrollgefuehl':
         this.fragenService.addFrage4("Es ist schwierig, die Balance zwischen Automatisierung und menschlicher Kontrolle zu finden, die Benutzer nicht zu überfordern und intuitive Kontrollmechanismen zu entwickeln.")
@@ -284,7 +284,7 @@ export class FaqComponent implements OnInit {
   changeText5() {
     switch (this.selectedTeilgebiet5.key) {
       case 'vertrauen':
-        this.fragenService.addFrage5("Alle Benutzer, die mit automatisierten Systemen interagieren, sind betroffen, insbesondere solche in sicherheitskritischen Bereichen wie Medizin, Luftfahrt und autonomen Fahrzeugen.")
+        this.fragenService.addFrage5("Alle Benutzer, die mit automatisierten Softwaresystemen interagieren, sind betroffen, insbesondere solche in sicherheitskritischen Bereichen wie Medizin, Luftfahrt und autonomen Fahrzeugen.")
         break
       case 'kontrollgefuehl':
         this.fragenService.addFrage5("Benutzer in kritischen Umgebungen wie Piloten, Chirurgen und Fahrer von autonomen Fahrzeugen sind besonders betroffen.")
@@ -390,7 +390,7 @@ export class FaqComponent implements OnInit {
         this.fragenService.addFrage7("Komfort kann durch Implementierung einer intuitiven und benutzerfreundlichen Benutzeroberfläche, regelmäßige Sammlung und Umsetzung von Benutzerfeedback sowie Anpassung an unterschiedliche Benutzerbedürfnisse und -fähigkeiten verbessert werden.")
         break
       case 'verfuegbarkeit':
-        this.fragenService.addFrage7("Verfügbarkeit kann durch Implementierung robuster und zuverlässiger Systeme, regelmäßige Wartung und Überprüfung sowie schnelle Fehlerbehebung und Wiederherstellung verbessert werden.")
+        this.fragenService.addFrage7("Verfügbarkeit kann durch Implementierung robuster und zuverlässiger Softwaresysteme, regelmäßige Wartung und Überprüfung sowie schnelle Fehlerbehebung und Wiederherstellung verbessert werden.")
         break
     }
   }
