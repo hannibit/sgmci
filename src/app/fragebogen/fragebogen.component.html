@@ -237,7 +237,9 @@
     <div *ngFor="let teilgebiet of ausgewaehlteTeilgebiete" class="col-6">
       <p-card [header]="teilgebiet.name">
         <p style="padding-bottom: 5px">{{ teilgebiet.beschreibung }}</p>
-        <p-button (click)="navigate(teilgebiet.name)">Teilgebiet {{ teilgebiet.name }} anzeigen</p-button>
+        <ng-template pTemplate="footer">
+          <p-button (click)="navigate(teilgebiet.name)">Teilgebiet {{ teilgebiet.name }} anzeigen</p-button>
+        </ng-template>
       </p-card>
     </div>
   </div>
