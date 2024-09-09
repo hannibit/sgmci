@@ -1,27 +1,13 @@
 # SgmciProtoyp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+In einer zunehmend digitalisierten Welt gewinnen automatisierte Systeme in vielen Lebens- und Arbeitsbereichen an Bedeutung. Ob in der Industrie, im Gesundheitswesen oder im täglichen Leben – automatisierte Systeme unterstützen Entscheidungen, optimieren Prozesse und erhöhen die Effizienz. Damit diese Systeme jedoch erfolgreich eingesetzt werden können, ist das Vertrauen der Benutzer in ihre Zuverlässigkeit, Sicherheit und Fairness von entscheidender Bedeutung.
 
-## Development server
+Diese Guideline bietet eine umfassende Übersicht über die wesentlichen Faktoren, die das Vertrauen in automatisierte Systeme beeinflussen. Vertrauen entsteht durch eine Vielzahl von Aspekten, darunter Transparenz, Vorhersehbarkeit, Sicherheit, Kontrollgefühl, und Benutzerfreundlichkeit. Jedes dieser Teilgebiete spielt eine entscheidende Rolle bei der Akzeptanz und dem erfolgreichen Einsatz solcher Systeme.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Im Folgenden wird auf die einzelnen Einflussfaktoren eingegangen, die dazu beitragen, Vertrauen aufzubauen und aufrechtzuerhalten. Zudem werden praxisnahe Empfehlungen und Best Practices vorgestellt, um sicherzustellen, dass automatisierte Systeme den hohen Erwartungen und Anforderungen der Benutzer gerecht werden.
 
-## Code scaffolding
+Diese Guideline soll Entwicklern, Projektmanagern und anderen Stakeholdern als wertvolle Ressource dienen, um bei der Gestaltung und Implementierung automatisierter Systeme den Aspekt des Vertrauens konsequent zu berücksichtigen.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Starten des Prototyps
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Führen Sie `ng serve` im Terminal aus. Navigieren Sie zu `http://localhost:4200/`. Die Anwendung wird automatisch neu geladen, wenn Sie eine der Quelldateien ändern.
