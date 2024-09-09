@@ -1,4 +1,4 @@
-# SgmciProtoyp
+# SgmciPrototyp
 
 In einer zunehmend digitalisierten Welt gewinnen automatisierte Systeme in vielen Lebens- und Arbeitsbereichen an Bedeutung. Ob in der Industrie, im Gesundheitswesen oder im täglichen Leben – automatisierte Systeme unterstützen Entscheidungen, optimieren Prozesse und erhöhen die Effizienz. Damit diese Systeme jedoch erfolgreich eingesetzt werden können, ist das Vertrauen der Benutzer in ihre Zuverlässigkeit, Sicherheit und Fairness von entscheidender Bedeutung.
 
