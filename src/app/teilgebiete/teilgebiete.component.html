@@ -8,7 +8,14 @@
   <div class="grid">
     <div *ngFor="let teilgebiet of teilgebiete" class="col-6">
       <p-card [header]="teilgebiet.name">
-        <p style="padding-bottom: 5px">{{teilgebiet.beschreibung}}</p>
+        <div class="grid" style="padding-bottom: 5px">
+          <div class="col-fixed" style="width: 150px">
+            <p-image src="{{teilgebiet.bild}}" alt="Bild {{teilgebiet.name}}" width="100"></p-image>
+          </div>
+          <div class="col">
+            <div>{{teilgebiet.beschreibung}}</div>
+          </div>
+        </div>
         <ng-template pTemplate="footer">
           <div>
             <p-button (click)="navigate(teilgebiet.name)">Teilgebiet {{teilgebiet.name}} anzeigen</p-button>

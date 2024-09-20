@@ -21,42 +21,52 @@ export class TeilgebieteComponent implements OnInit{
       {
         name: 'Kontrollgefühl',
         beschreibung: 'Gefühl, die Kontrolle über eine Situation zu haben',
+        bild: 'http://localhost:4200/assets/kontrollgefuehl.png'
       },
       {
         name: 'Sicherheit',
         beschreibung: 'Schutz vor Gefahren und Risiken',
+        bild: 'http://localhost:4200/assets/sicherheit.png'
       },
       {
         name: 'Korrektheit',
         beschreibung: 'Richtigkeit, Genauigkeit und Fehlerfreiheit',
+        bild: 'http://localhost:4200/assets/korrektheit.png'
       },
       {
         name: 'Transparenz',
         beschreibung: 'Offenlegung von Informationen und Prozessen',
+        bild: 'http://localhost:4200/assets/transparenz.png'
       },
       {
         name: 'Vorhersehbarkeit',
         beschreibung: 'Möglichkeit, zukünftige Ereignisse vorherzusagen',
+        bild: 'http://localhost:4200/assets/vorhersehbarkeit.png'
       },
       {
         name: 'Erfahrung und Bekanntheit',
         beschreibung: 'Wissen und Kenntnisse über eine Sache oder Person',
+        bild: 'http://localhost:4200/assets/erfahrung-bekanntheit.png'
       },
       {
         name: 'Zeit/Effizienz',
         beschreibung: 'Zeitersparnis und schnelle Erledigung von Aufgaben',
+        bild: 'http://localhost:4200/assets/zeit-effizienz.png'
       },
       {
         name: 'Support/Updates',
         beschreibung: 'Unterstützung und Aktualisierungen',
+        bild: 'http://localhost:4200/assets/support-updates.png'
       },
       {
         name: 'Komfort',
         beschreibung: 'Komfortable und einfache Bedienung',
+        bild: 'http://localhost:4200/assets/komfort.png'
       },
       {
         name: 'Verfügbarkeit',
         beschreibung: 'Verfügbarkeit von Informationen und Dienstleistungen',
+        bild: 'http://localhost:4200/assets/verfuegbarkeit.png'
       },
     ]
   }

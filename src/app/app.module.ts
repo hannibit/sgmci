@@ -34,6 +34,8 @@ import {TabViewModule} from "primeng/tabview";
 import {AccordionModule} from "primeng/accordion";
 import {StepperModule} from "primeng/stepper";
 import {ScrollPanelModule} from "primeng/scrollpanel";
+import {ImageModule} from "primeng/image";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -55,25 +57,27 @@ import {ScrollPanelModule} from "primeng/scrollpanel";
     ZeitEffizienzComponent,
     TeilgebieteComponent
   ],
-    imports: [
-        BrowserAnimationsModule,
-        BrowserModule,
-        AppRoutingModule,
-        CardModule,
-        Button,
-        MenubarModule,
-        FieldsetModule,
-        RadioButtonModule,
-        FormsModule,
-        DividerModule,
-        DialogModule,
-        PanelModule,
-        DropdownModule,
-        TabViewModule,
-        AccordionModule,
-        StepperModule,
-        ScrollPanelModule
-    ],
+  imports: [
+    BrowserAnimationsModule,
+    BrowserModule,
+    AppRoutingModule,
+    CardModule,
+    Button,
+    MenubarModule,
+    FieldsetModule,
+    RadioButtonModule,
+    FormsModule,
+    DividerModule,
+    DialogModule,
+    PanelModule,
+    DropdownModule,
+    TabViewModule,
+    AccordionModule,
+    StepperModule,
+    ScrollPanelModule,
+    ImageModule,
+    NgOptimizedImage
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
